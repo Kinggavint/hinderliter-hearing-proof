@@ -44,8 +44,8 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
 
-    // Close mobile nav when a link is clicked
-    mobileNav.querySelectorAll('a').forEach(link => {
+    // Close mobile nav when a non-trigger link is clicked
+    mobileNav.querySelectorAll('a:not(.nav-dropdown__trigger)').forEach(link => {
       link.addEventListener('click', () => {
         mobileNav.classList.remove('open');
         mobileToggle.classList.remove('open');
@@ -55,6 +55,55 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+
+  /* === Desktop Dropdown Navigation === */
+  document.querySelectorAll('.nav-dropdown').forEach(dropdown => {
+    const trigger = dropdown.querySelector('.nav-dropdown__trigger');
+    const menu = dropdown.querySelector('.nav-dropdown__menu');
+    if (!trigger || !menu) return;
+
+    let closeTimeout;
+
+    // Desktop: show on hover
+    dropdown.addEventListener('mouseenter', () => {
+      if (window.innerWidth > 900) {
+        clearTimeout(closeTimeout);
+        dropdown.classList.add('is-open');
+      }
+    });
+
+    dropdown.addEventListener('mouseleave', () => {
+      if (window.innerWidth > 900) {
+        closeTimeout = setTimeout(() => {
+          dropdown.classList.remove('is-open');
+        }, 150);
+      }
+    });
+
+    // Desktop: also toggle on click for accessibility
+    trigger.addEventListener('click', (e) => {
+      if (window.innerWidth > 900) {
+        // Allow navigation to the parent page (About, Services)
+        // The dropdown just enhances with sub-links on hover
+        return;
+      }
+      // Mobile: toggle dropdown submenu
+      e.preventDefault();
+      const wasOpen = dropdown.classList.contains('open');
+      // Close all other dropdowns first
+      document.querySelectorAll('.nav-dropdown.open').forEach(d => {
+        if (d !== dropdown) d.classList.remove('open');
+      });
+      dropdown.classList.toggle('open', !wasOpen);
+    });
+  });
+
+  // Close desktop dropdowns when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.nav-dropdown')) {
+      document.querySelectorAll('.nav-dropdown.is-open').forEach(d => d.classList.remove('is-open'));
+    }
+  });
 
   /* === Active Nav Link === */
   const currentPage = window.location.pathname.split('/').pop() || 'index.html';
@@ -97,14 +146,3 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 });
-
-  /* === Mobile Dropdown Toggles === */
-  document.querySelectorAll('.nav-dropdown__trigger').forEach(trigger => {
-    trigger.addEventListener('click', function(e) {
-      if (window.innerWidth <= 900) {
-        e.preventDefault();
-        const dropdown = this.closest('.nav-dropdown');
-        dropdown.classList.toggle('open');
-      }
-    });
-  });

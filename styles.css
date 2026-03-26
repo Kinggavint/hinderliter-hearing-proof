@@ -1147,10 +1147,12 @@ noscript ~ * .fade-up {
   display: inline-flex;
   align-items: center;
   gap: 4px;
+  cursor: pointer;
 }
 
 .nav-dropdown__trigger svg {
   transition: transform var(--transition-fast);
+  flex-shrink: 0;
 }
 
 .nav-dropdown__menu {
@@ -1165,18 +1167,23 @@ noscript ~ * .fade-up {
   padding: var(--space-2) 0;
   opacity: 0;
   visibility: hidden;
+  pointer-events: none;
   transition: opacity var(--transition-fast), visibility var(--transition-fast);
   z-index: 300;
-  margin-top: var(--space-2);
+  margin-top: var(--space-1);
 }
 
+/* Show dropdown on hover OR when JS adds .is-open */
 .nav-dropdown:hover .nav-dropdown__menu,
-.nav-dropdown:focus-within .nav-dropdown__menu {
+.nav-dropdown:focus-within .nav-dropdown__menu,
+.nav-dropdown.is-open .nav-dropdown__menu {
   opacity: 1;
   visibility: visible;
+  pointer-events: auto;
 }
 
-.nav-dropdown:hover .nav-dropdown__trigger svg {
+.nav-dropdown:hover .nav-dropdown__trigger svg,
+.nav-dropdown.is-open .nav-dropdown__trigger svg {
   transform: rotate(180deg);
 }
 
@@ -1186,7 +1193,7 @@ noscript ~ * .fade-up {
   font-size: var(--text-sm);
   color: var(--color-text);
   white-space: nowrap;
-  transition: background var(--transition-fast);
+  transition: background var(--transition-fast), color var(--transition-fast);
 }
 
 .nav-dropdown__menu a::after {
@@ -1212,17 +1219,29 @@ noscript ~ * .fade-up {
   .nav-dropdown__menu {
     position: static;
     transform: none;
-    opacity: 1;
-    visibility: visible;
     box-shadow: none;
     margin-top: 0;
     padding: 0 0 0 var(--space-4);
     min-width: auto;
-    display: none;
+    background: transparent;
+    /* Hidden by default on mobile */
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.2s ease, max-height 0.3s ease, visibility 0.2s ease;
   }
 
   .nav-dropdown.open .nav-dropdown__menu {
-    display: block;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    max-height: 400px;
+  }
+
+  .nav-dropdown.open .nav-dropdown__trigger svg {
+    transform: rotate(180deg);
   }
 
   .nav-dropdown__menu a {
