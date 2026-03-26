@@ -97,3 +97,14 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 });
+
+  /* === Mobile Dropdown Toggles === */
+  document.querySelectorAll('.nav-dropdown__trigger').forEach(trigger => {
+    trigger.addEventListener('click', function(e) {
+      if (window.innerWidth <= 900) {
+        e.preventDefault();
+        const dropdown = this.closest('.nav-dropdown');
+        dropdown.classList.toggle('open');
+      }
+    });
+  });

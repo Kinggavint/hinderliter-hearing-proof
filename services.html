@@ -27,7 +27,11 @@
         </span>
       </div>
       <div class="top-bar__right">
-        <a href="tel:248-985-8479" class="top-bar__cta">
+        <a href="https://link.clover.com/urlshortener/t2t9LL" class="top-bar__cta" target="_blank" rel="noopener noreferrer" style="background:#E8A317;">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+          Pay Online
+        </a>
+        <a href="tel:248-430-4416" class="top-bar__cta">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
           Call or Text Us
         </a>
@@ -35,21 +39,40 @@
     </div>
   </div>
 
+
   <!-- Header -->
   <header class="header">
     <div class="container">
       <a href="index.html" class="header__logo" aria-label="Hinderliter Hearing Services Home">
-        <img src="assets/logo.png" alt="Hinderliter Hearing Services logo" width="200" height="54">
+        <img src="assets/logo.png" alt="Hinderliter Hearing Services logo" style="height:54px;width:auto;">
       </a>
       <nav class="header__nav" aria-label="Main navigation">
         <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
+        <div class="nav-dropdown">
+          <a href="about.html" class="nav-dropdown__trigger">About <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="12" height="12"><polyline points="6 9 12 15 18 9"/></svg></a>
+          <div class="nav-dropdown__menu">
+            <a href="about.html">About Us</a>
+            <a href="https://www.hinderliterhearing.com/patient-journey/" target="_blank" rel="noopener noreferrer">Patient Journey</a>
+          </div>
+        </div>
+        <div class="nav-dropdown">
+          <a href="services.html" class="nav-dropdown__trigger">Services <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="12" height="12"><polyline points="6 9 12 15 18 9"/></svg></a>
+          <div class="nav-dropdown__menu">
+            <a href="services.html#hearing-tests">Hearing Tests</a>
+            <a href="services.html#hearing-aids">Hearing Aid Services</a>
+            <a href="services.html#hearing-repair">Hearing Aid Repair</a>
+            <a href="services.html#hearing-protection">Hearing Protection</a>
+            <a href="services.html#tinnitus">Tinnitus Treatment</a>
+            <a href="https://link.clover.com/urlshortener/t2t9LL" target="_blank" rel="noopener noreferrer">Pay Online</a>
+          </div>
+        </div>
+        <a href="hearing-aids.html">Hearing Aids</a>
         <a href="reviews.html">Reviews</a>
+        <a href="learn-more.html">Learn More</a>
         <a href="contact.html">Contact</a>
-        <a href="tel:248-985-8479" class="header__phone" aria-label="Call 248-985-8479">
+        <a href="tel:248-430-4416" class="header__phone" aria-label="Call 248-430-4416">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          248-985-8479
+          248-430-4416
         </a>
       </nav>
       <button class="header__mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
@@ -62,7 +85,7 @@
   <!-- Hero -->
   <section class="hero hero--short">
     <div class="hero__bg">
-      <img src="assets/friends-laughing.png" alt="Mature friends laughing and enjoying life together" width="1200" height="400">
+      <img src="assets/hero-clinic.png" alt="Modern hearing clinic interior" width="1200" height="400">
     </div>
     <div class="hero__overlay"></div>
     <div class="container">
@@ -81,7 +104,9 @@
       <a href="#hearing-aids" style="font-size:var(--text-sm);font-weight:600;color:var(--color-text-muted);">Hearing Aids</a>
       <a href="#hearing-loss" style="font-size:var(--text-sm);font-weight:600;color:var(--color-text-muted);">Hearing Loss</a>
       <a href="#tinnitus" style="font-size:var(--text-sm);font-weight:600;color:var(--color-text-muted);">Tinnitus</a>
-      <a href="#additional" style="font-size:var(--text-sm);font-weight:600;color:var(--color-text-muted);">Additional Services</a>
+      <a href="#hearing-repair" style="font-size:var(--text-sm);font-weight:600;color:var(--color-text-muted);">Repair</a>
+      <a href="#hearing-protection" style="font-size:var(--text-sm);font-weight:600;color:var(--color-text-muted);">Protection</a>
+      <a href="#additional" style="font-size:var(--text-sm);font-weight:600;color:var(--color-text-muted);">More Services</a>
     </div>
   </nav>
 
@@ -113,6 +138,10 @@
             </div>
           </div>
           <p style="margin-top:var(--space-4);"><strong>When should you get tested?</strong> If you're over 50, experience difficulty following conversations, frequently ask others to repeat themselves, or need to turn up the TV volume higher than others prefer.</p>
+          <div style="display:flex;gap:var(--space-3);flex-wrap:wrap;margin-top:var(--space-4);">
+            <a href="contact.html" class="btn btn--primary">Schedule a Hearing Test</a>
+            <a href="learn-more.html#hearing-tests" class="btn btn--outline">Learn More &rarr;</a>
+          </div>
         </div>
       </div>
     </div>
@@ -160,6 +189,7 @@
             </div>
           </div>
           <p style="margin-top:var(--space-4);color:var(--color-text-muted);font-size:var(--text-sm);">Hearing aids typically last 3–5 years with proper care and maintenance.</p>
+          <a href="hearing-aids.html" class="btn btn--primary mt-4">Explore Hearing Aids &rarr;</a>
         </div>
         <div class="split__img">
           <img src="assets/hearing-aids-online.jpg" alt="Man smiling while using smartphone with hearing aids" width="500" height="400">
@@ -299,6 +329,73 @@
               <div><strong>Behavioral Therapy</strong> — Helps you develop coping strategies and reduce the emotional impact of tinnitus</div>
             </div>
           </div>
+          <div style="display:flex;gap:var(--space-3);flex-wrap:wrap;margin-top:var(--space-4);">
+            <a href="contact.html" class="btn btn--primary">Schedule an Evaluation</a>
+            <a href="learn-more.html#tinnitus" class="btn btn--outline">Learn More &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HEARING AID REPAIR -->
+  <section class="section" id="hearing-repair">
+    <div class="container">
+      <div class="split">
+        <div class="split__content fade-up">
+          <p class="section-header__label">Repairs &amp; Maintenance</p>
+          <h2>Hearing Aid Repair</h2>
+          <p>Whether your hearing aids need a simple cleaning, a new tube, or a more complex electronic repair, our team is here to help. We service all major brands and can handle most minor repairs in-office, often the same day you bring them in.</p>
+          <p><strong>Common repairs include:</strong> replacing tubing, cleaning wax guards and filters, repairing or replacing receivers, fixing broken battery doors, resolving moisture damage, and reprogramming after a reset.</p>
+          <p>For repairs that require manufacturer service, we work directly with the manufacturer to minimize turnaround time. We can also provide loaner hearing aids while yours are being repaired, so you never have to go without hearing.</p>
+          <p><strong>Repair costs</strong> vary depending on the type and extent of the repair. Many repairs are covered under your hearing aid warranty. We'll always give you a clear cost estimate before proceeding with any repair work.</p>
+          <div style="display:flex;gap:var(--space-3);flex-wrap:wrap;margin-top:var(--space-4);">
+            <a href="contact.html" class="btn btn--primary">Schedule a Repair</a>
+            <a href="hearing-aids.html#services" class="btn btn--outline">Our Hearing Aid Services &rarr;</a>
+          </div>
+        </div>
+        <div class="split__img fade-up">
+          <img src="assets/hearing-aids-online.jpg" alt="Hearing aid maintenance" width="600" height="400">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HEARING PROTECTION -->
+  <section class="section section--warm" id="hearing-protection">
+    <div class="container">
+      <div class="split">
+        <div class="split__img fade-up">
+          <img src="assets/grandparents-outdoors.png" alt="Active lifestyle with hearing protection" width="600" height="400">
+        </div>
+        <div class="split__content fade-up">
+          <p class="section-header__label">Hearing Protection</p>
+          <h2>Protect Your Hearing</h2>
+          <p>Noise-induced hearing loss is one of the most preventable forms of hearing damage. Custom hearing protection provides superior comfort and noise reduction compared to generic foam earplugs.</p>
+          <h3 style="font-size:var(--text-base);font-weight:700;margin-top:var(--space-4);margin-bottom:var(--space-3);">Custom Ear Protection Options:</h3>
+          <div class="feature-list">
+            <div class="feature-list__item">
+              <div class="feature-list__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <div><strong>Musicians' Earplugs</strong> &mdash; Reduce volume evenly across all frequencies so music sounds natural, just quieter</div>
+            </div>
+            <div class="feature-list__item">
+              <div class="feature-list__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <div><strong>Hunters' &amp; Shooters' Protection</strong> &mdash; Protect against impulse noise while allowing normal conversation</div>
+            </div>
+            <div class="feature-list__item">
+              <div class="feature-list__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <div><strong>Industrial &amp; Workplace Protection</strong> &mdash; Custom-molded for all-day comfort in noisy work environments</div>
+            </div>
+            <div class="feature-list__item">
+              <div class="feature-list__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <div><strong>Bluetooth Ear Protection</strong> &mdash; Stream music or calls while protecting your hearing in loud environments</div>
+            </div>
+            <div class="feature-list__item">
+              <div class="feature-list__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <div><strong>Swimmers' Plugs</strong> &mdash; Keep water out of your ears during swimming and water sports</div>
+            </div>
+          </div>
+          <a href="contact.html" class="btn btn--primary mt-6">Get Custom Protection</a>
         </div>
       </div>
     </div>
@@ -311,35 +408,30 @@
         <p class="section-header__label">Additional Services</p>
         <h2 class="section-header__title">More Ways We Can Help</h2>
       </div>
-      <div class="grid-4 fade-up">
-        <div class="card" style="text-align:center;">
-          <div class="card__icon" style="margin:0 auto var(--space-4);">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
-          </div>
-          <h3 class="card__title" style="font-size:var(--text-base);">Hearing Aid Repair</h3>
-          <p class="card__text">Expert repair and maintenance services to keep your hearing aids working at their best.</p>
+      <div class="grid-3 fade-up">
+        <div class="card">
+          <h3 class="card__title">Earwax Removal</h3>
+          <p class="card__text">Excessive earwax (cerumen) can cause hearing loss, discomfort, and even damage hearing aids. Our audiologists use safe, professional methods to remove earwax buildup, including irrigation and manual removal techniques. If you suspect a blocked ear is affecting your hearing, schedule an appointment for a quick and comfortable earwax removal.</p>
+          <a href="contact.html" class="btn btn--outline mt-4" style="font-size:var(--text-xs);">Schedule Removal</a>
         </div>
-        <div class="card" style="text-align:center;">
-          <div class="card__icon" style="margin:0 auto var(--space-4);">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          </div>
-          <h3 class="card__title" style="font-size:var(--text-base);">Hearing Protection</h3>
-          <p class="card__text">Custom hearing protection for musicians, hunters, industrial workers, and anyone exposed to loud environments.</p>
+        <div class="card">
+          <h3 class="card__title">Custom Ear Molds</h3>
+          <p class="card__text">We create custom-fitted ear molds for hearing aids, hearing protection, in-ear monitors, and specialty applications. Custom molds are made from an impression of your ear for a precise, comfortable fit. They're more effective and comfortable than generic alternatives and are available in various materials and colors.</p>
+          <a href="contact.html" class="btn btn--outline mt-4" style="font-size:var(--text-xs);">Get Custom Molds</a>
         </div>
-        <div class="card" style="text-align:center;">
-          <div class="card__icon" style="margin:0 auto var(--space-4);">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12h.01M12 12h.01M16 12h.01"/></svg>
-          </div>
-          <h3 class="card__title" style="font-size:var(--text-base);">Custom Molds</h3>
-          <p class="card__text">Custom-fitted ear molds for hearing aids, hearing protection, swimmers, and other specialized needs.</p>
+        <div class="card">
+          <h3 class="card__title">Cochlear Implant Referral</h3>
+          <p class="card__text">For patients with severe to profound hearing loss who may not benefit sufficiently from hearing aids, we provide cochlear implant evaluations and referrals. We work closely with cochlear implant surgeons and can guide you through the evaluation process to determine if a cochlear implant might be right for you.</p>
+          <a href="contact.html" class="btn btn--outline mt-4" style="font-size:var(--text-xs);">Ask About Referral</a>
         </div>
-        <div class="card" style="text-align:center;">
-          <div class="card__icon" style="margin:0 auto var(--space-4);">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3l7.07 16.97 2.51-7.39 7.39-2.51L3 3z"/></svg>
-          </div>
-          <h3 class="card__title" style="font-size:var(--text-base);">Earwax Removal</h3>
-          <p class="card__text">Safe, professional earwax removal to improve hearing and ear health.</p>
-        </div>
+      </div>
+
+      <!-- Special Offers -->
+      <div class="fade-up mt-8" style="background:linear-gradient(135deg,var(--color-primary-subtle),var(--color-surface-teal));border-radius:var(--radius-xl);padding:var(--space-8);text-align:center;">
+        <p class="section-header__label">Special Offer</p>
+        <h3 style="font-size:var(--text-lg);margin-top:var(--space-2);margin-bottom:var(--space-3);">Free Assistive Device with Hearing Aid Purchase</h3>
+        <p style="color:var(--color-text-muted);max-width:600px;margin:0 auto var(--space-4);">Receive a complimentary assistive listening device when you purchase hearing aids from Hinderliter Hearing Services. <em>*Some restrictions apply.</em></p>
+        <a href="contact.html" class="btn btn--primary">Contact Us to Learn More</a>
       </div>
     </div>
   </section>
@@ -365,7 +457,7 @@
       <p>Schedule a comprehensive hearing evaluation with our caring team today.</p>
       <div style="display:flex;gap:var(--space-4);justify-content:center;flex-wrap:wrap;">
         <a href="contact.html" class="btn btn--white btn--large">Schedule an Appointment</a>
-        <a href="tel:248-985-8479" class="btn btn--outline btn--large" style="border-color:#fff;color:#fff !important;">Call 248-985-8479</a>
+        <a href="tel:248-430-4416" class="btn btn--outline btn--large" style="border-color:#fff;color:#fff !important;">Call 248-430-4416</a>
       </div>
     </div>
   </section>
@@ -375,8 +467,16 @@
     <div class="container">
       <div class="footer__grid">
         <div class="footer__brand">
-          <img src="assets/logo.png" alt="Hinderliter Hearing Services" width="180" height="50">
+          <img src="assets/logo.png" alt="Hinderliter Hearing Services" style="height:60px;width:auto;">
           <p>Giving the gift of hearing since 2003. Comprehensive audiology care in Birmingham, MI.</p>
+          <div class="footer__social" style="display:flex;gap:var(--space-3);margin-top:var(--space-4);">
+            <a href="https://www.google.com/search?q=Hinderliter+Hearing+Services" target="_blank" rel="noopener noreferrer" aria-label="Google Business Profile" style="display:flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.1);transition:background var(--transition-fast);" onmouseover="this.style.background='rgba(255,255,255,0.2)'" onmouseout="this.style.background='rgba(255,255,255,0.1)'">
+              <svg width="20" height="20" viewBox="0 0 24 24"><path fill="#fff" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/><path fill="#fff" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#fff" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18A10.04 10.04 0 0 0 1.09 12c0 1.62.39 3.14 1.09 4.49l3.66-2.84z"/><path fill="#fff" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+            </a>
+            <a href="https://www.facebook.com/hinderliterhearing/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" style="display:flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.1);transition:background var(--transition-fast);" onmouseover="this.style.background='rgba(255,255,255,0.2)'" onmouseout="this.style.background='rgba(255,255,255,0.1)'">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="#fff"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+          </div>
           <div class="footer__award">
             <img src="assets/nextdoor-award.jpg" alt="Nextdoor Neighborhood Favorite Award" width="100" height="80">
           </div>
@@ -387,7 +487,9 @@
             <a href="index.html">Home</a>
             <a href="about.html">About Us</a>
             <a href="services.html">Services</a>
+            <a href="hearing-aids.html">Hearing Aids</a>
             <a href="reviews.html">Reviews</a>
+            <a href="learn-more.html">Learn More</a>
             <a href="contact.html">Contact</a>
           </div>
         </div>
@@ -395,9 +497,12 @@
           <h3 class="footer__heading">Services</h3>
           <div class="footer__links">
             <a href="services.html#hearing-tests">Hearing Tests</a>
-            <a href="services.html#hearing-aids">Hearing Aids</a>
+            <a href="services.html#hearing-aids">Hearing Aid Services</a>
+            <a href="services.html#hearing-repair">Hearing Aid Repair</a>
+            <a href="services.html#hearing-protection">Hearing Protection</a>
             <a href="services.html#tinnitus">Tinnitus Treatment</a>
-            <a href="services.html#additional">Custom Molds &amp; Repairs</a>
+            <a href="hearing-aids.html">Hearing Aids</a>
+            <a href="https://link.clover.com/urlshortener/t2t9LL" target="_blank" rel="noopener noreferrer">Pay Online</a>
           </div>
         </div>
         <div>
@@ -408,7 +513,7 @@
           </div>
           <div class="footer__contact-item">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            <a href="tel:248-985-8479">248-985-8479</a>
+            <a href="tel:248-430-4416">248-430-4416</a>
           </div>
           <div class="footer__contact-item">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><polyline points="22,4 12,13 2,4"/></svg>
@@ -416,7 +521,7 @@
           </div>
           <div class="footer__contact-item">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            <span>Mon–Thu: 8am–5pm<br>Fri: 9am–3pm</span>
+            <span>Mon&ndash;Thu: 8am&ndash;5pm<br>Fri: 9am&ndash;3pm</span>
           </div>
         </div>
       </div>

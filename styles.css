@@ -1137,3 +1137,213 @@ noscript ~ * .fade-up {
 .fade-up {
   animation: forceVisible 0s 1.5s forwards;
 }
+
+/* === Dropdown Navigation === */
+.nav-dropdown {
+  position: relative;
+}
+
+.nav-dropdown__trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.nav-dropdown__trigger svg {
+  transition: transform var(--transition-fast);
+}
+
+.nav-dropdown__menu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 200px;
+  background: #fff;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  padding: var(--space-2) 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--transition-fast), visibility var(--transition-fast);
+  z-index: 300;
+  margin-top: var(--space-2);
+}
+
+.nav-dropdown:hover .nav-dropdown__menu,
+.nav-dropdown:focus-within .nav-dropdown__menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+.nav-dropdown:hover .nav-dropdown__trigger svg {
+  transform: rotate(180deg);
+}
+
+.nav-dropdown__menu a {
+  display: block;
+  padding: var(--space-2) var(--space-5);
+  font-size: var(--text-sm);
+  color: var(--color-text);
+  white-space: nowrap;
+  transition: background var(--transition-fast);
+}
+
+.nav-dropdown__menu a::after {
+  display: none !important;
+}
+
+.nav-dropdown__menu a:hover {
+  background: var(--color-primary-subtle);
+  color: var(--color-primary-dark);
+}
+
+/* Mobile dropdown */
+@media (max-width: 900px) {
+  .nav-dropdown {
+    width: 100%;
+  }
+
+  .nav-dropdown__trigger {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .nav-dropdown__menu {
+    position: static;
+    transform: none;
+    opacity: 1;
+    visibility: visible;
+    box-shadow: none;
+    margin-top: 0;
+    padding: 0 0 0 var(--space-4);
+    min-width: auto;
+    display: none;
+  }
+
+  .nav-dropdown.open .nav-dropdown__menu {
+    display: block;
+  }
+
+  .nav-dropdown__menu a {
+    font-size: var(--text-base);
+    padding: var(--space-2) var(--space-3);
+  }
+}
+
+/* === Footer Brand Logo Fix === */
+.footer__brand img {
+  width: auto;
+  height: 60px;
+  object-fit: contain;
+}
+
+/* === Pay Online button in top bar === */
+.top-bar__right {
+  gap: var(--space-2);
+}
+
+/* === Rating Badge (Reviews) === */
+.rating-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-8);
+  background: var(--color-surface);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+  max-width: 320px;
+  margin: 0 auto var(--space-8);
+}
+
+.rating-badge__score {
+  font-family: var(--font-display);
+  font-size: var(--text-3xl);
+  font-weight: 700;
+  color: var(--color-text);
+  line-height: 1;
+}
+
+.rating-badge__stars {
+  color: #F5A623;
+  font-size: var(--text-xl);
+  letter-spacing: 3px;
+}
+
+.rating-badge__label {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+/* === Article Cards (Learn More) === */
+.article-card {
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5) var(--space-6);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-medium), box-shadow var(--transition-medium);
+  text-decoration: none;
+  display: block;
+}
+
+.article-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.article-card__title {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-text);
+  line-height: 1.5;
+  transition: color var(--transition-fast);
+}
+
+.article-card:hover .article-card__title {
+  color: var(--color-primary-dark);
+}
+
+.article-card__arrow {
+  font-size: var(--text-xs);
+  color: var(--color-primary);
+  margin-top: var(--space-2);
+  display: block;
+}
+
+/* === Button variant for Google/Facebook === */
+.btn--google {
+  background: #4285F4;
+  color: #fff !important;
+  border-color: #4285F4;
+}
+
+.btn--google:hover {
+  background: #3367D6;
+  border-color: #3367D6;
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn--facebook {
+  background: #1877F2;
+  color: #fff !important;
+  border-color: #1877F2;
+}
+
+.btn--facebook:hover {
+  background: #145dbf;
+  border-color: #145dbf;
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+/* === Review buttons row === */
+.review-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  justify-content: center;
+  margin-top: var(--space-6);
+}
