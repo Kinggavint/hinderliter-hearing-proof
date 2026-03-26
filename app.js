@@ -40,7 +40,7 @@
   }, { passive: true });
 })();
 
-// Scroll animations
+// Scroll animations — stagger reveals as user scrolls
 (function(){
   const els = document.querySelectorAll('.fade-up');
   if (!els.length) return;
@@ -52,9 +52,14 @@
         observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  }, { threshold: 0.05, rootMargin: '0px 0px 80px 0px' });
   
   els.forEach(function(el) { observer.observe(el); });
+  
+  // Fallback: reveal everything after 1.5s in case observer doesn't fire
+  setTimeout(function() {
+    els.forEach(function(el) { el.classList.add('visible'); });
+  }, 1500);
 })();
 
 // Contact form handler
