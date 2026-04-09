@@ -44,7 +44,7 @@
   <header class="header">
     <div class="container">
       <a href="index.html" class="header__logo" aria-label="Hinderliter Hearing Services Home">
-        <img src="assets/logo.png" alt="Hinderliter Hearing Services logo" style="height:54px;width:auto;">
+        <img src="assets/logo.png" alt="Hinderliter Hearing Services logo" style="height:66px;width:auto;">
       </a>
       <nav class="header__nav" aria-label="Main navigation">
         <a href="index.html">Home</a>
@@ -52,15 +52,17 @@
         <div class="nav-dropdown">
           <a href="services.html" class="nav-dropdown__trigger">Services <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="12" height="12"><polyline points="6 9 12 15 18 9"/></svg></a>
           <div class="nav-dropdown__menu">
-            <a href="services.html#hearing-tests">Hearing Tests</a>
+            <a href="services.html#hearing-tests">Diagnostic Hearing Evaluations</a>
             <a href="services.html#hearing-aids">Hearing Aid Services</a>
             <a href="services.html#hearing-repair">Hearing Aid Repair</a>
             <a href="services.html#hearing-protection">Hearing Protection</a>
             <a href="services.html#tinnitus">Tinnitus Treatment</a>
-            <a href="https://link.clover.com/urlshortener/t2t9LL" target="_blank" rel="noopener noreferrer">Pay Online</a>
+            <a href="services.html#cochlear-implants">Cochlear Implant Services</a>
+            <a href="services.html#cerumen-removal">Cerumen (Ear Wax) Removal</a>
           </div>
         </div>
         <a href="hearing-aids.html">Hearing Aids</a>
+        <a href="accessories.html">Accessories</a>
         <a href="reviews.html">Reviews</a>
         <a href="learn-more.html">Learn More</a>
         <a href="contact.html">Contact</a>
@@ -97,7 +99,17 @@
       <div class="section-header fade-up">
         <p class="section-header__label">Our Mission</p>
         <h2 class="section-header__title">Committed to Better Hearing</h2>
-        <p class="section-header__desc">Hinderliter Hearing is committed to providing the highest standard of audiological care utilizing professionalism, technology, and genuine care for improving the quality of life of those with hearing impairment.</p>
+        <p class="section-header__desc">We are committed to the community as being the hearing center of excellence and of choice. We strive to be the best and most respected providers for both adults and children. We care about all hearing issues and provide the most advanced solutions to help people live a fuller more purposeful life. Our staff goes above and beyond for our patients to ensure they will feel at ease and comfortable in our clinic.</p>
+      </div>
+      <div class="fade-up" style="text-align:center;margin-top:var(--space-6);">
+        <h3 style="font-size:var(--text-base);font-weight:700;color:var(--color-primary-dark);margin-bottom:var(--space-4);">Core Values</h3>
+        <div style="display:flex;flex-wrap:wrap;gap:var(--space-2);justify-content:center;">
+          <span style="background:var(--color-primary-subtle);color:var(--color-primary-dark);font-weight:700;padding:var(--space-1) var(--space-4);border-radius:999px;font-size:var(--text-sm);">Integrity</span>
+          <span style="background:var(--color-primary-subtle);color:var(--color-primary-dark);font-weight:700;padding:var(--space-1) var(--space-4);border-radius:999px;font-size:var(--text-sm);">Team</span>
+          <span style="background:var(--color-primary-subtle);color:var(--color-primary-dark);font-weight:700;padding:var(--space-1) var(--space-4);border-radius:999px;font-size:var(--text-sm);">Trust</span>
+          <span style="background:var(--color-primary-subtle);color:var(--color-primary-dark);font-weight:700;padding:var(--space-1) var(--space-4);border-radius:999px;font-size:var(--text-sm);">Impact</span>
+          <span style="background:var(--color-primary-subtle);color:var(--color-primary-dark);font-weight:700;padding:var(--space-1) var(--space-4);border-radius:999px;font-size:var(--text-sm);">Compassion</span>
+        </div>
       </div>
     </div>
   </section>
@@ -173,12 +185,20 @@
           <p class="team-card__bio">Beth joined the team in September 2018 and had previously worked with Dr. Hinderliter for 11 years. She assists in marketing and coordination of patient care. She was raised in Birmingham, Michigan and is a graduate of Seaholm High School. Bachelor of Science in Human Resources from Oakland University and Master's Degree in Education and Training from Central Michigan University.</p>
         </div>
 
-        <!-- Marisa Carmona -->
+        <!-- Kelly -->
         <div class="team-card">
-          <div class="team-card__photo" style="background:var(--color-primary-subtle);display:flex;align-items:center;justify-content:center;color:var(--color-primary-dark);font-size:var(--text-2xl);font-family:var(--font-display);">MC</div>
-          <h3 class="team-card__name">Marisa Carmona</h3>
-          <p class="team-card__role">Practice Development Representative</p>
-          <p class="team-card__bio">Born and raised in Southwest Michigan. Bachelor's degree in Business Administration from Western Michigan University.</p>
+          <div class="team-card__photo" style="background:var(--color-primary-subtle);display:flex;align-items:center;justify-content:center;color:var(--color-primary-dark);font-size:var(--text-2xl);font-family:var(--font-display);">K</div>
+          <h3 class="team-card__name">Kelly</h3>
+          <p class="team-card__role">Audiology Assistant</p>
+          <p class="team-card__bio">Kelly is a valued member of the Hinderliter Hearing team, helping to ensure every patient feels welcome and cared for.</p>
+        </div>
+
+        <!-- Coming Soon -->
+        <div class="team-card">
+          <div class="team-card__photo" style="background:var(--color-primary-subtle);display:flex;align-items:center;justify-content:center;color:var(--color-primary-dark);font-size:var(--text-2xl);font-family:var(--font-display);">TA</div>
+          <h3 class="team-card__name">Coming Soon</h3>
+          <p class="team-card__role">Audiology Assistant</p>
+          <p class="team-card__bio">We are growing our team! A new audiology assistant will be joining us soon.</p>
         </div>
 
         <!-- Beth Miller -->
@@ -244,6 +264,7 @@
             <a href="about.html">About Us</a>
             <a href="services.html">Services</a>
             <a href="hearing-aids.html">Hearing Aids</a>
+            <a href="accessories.html">Accessories</a>
             <a href="reviews.html">Reviews</a>
             <a href="learn-more.html">Learn More</a>
             <a href="contact.html">Contact</a>
@@ -252,13 +273,13 @@
         <div>
           <h3 class="footer__heading">Services</h3>
           <div class="footer__links">
-            <a href="services.html#hearing-tests">Hearing Tests</a>
+            <a href="services.html#hearing-tests">Diagnostic Hearing Evaluations</a>
             <a href="services.html#hearing-aids">Hearing Aid Services</a>
             <a href="services.html#hearing-repair">Hearing Aid Repair</a>
             <a href="services.html#hearing-protection">Hearing Protection</a>
             <a href="services.html#tinnitus">Tinnitus Treatment</a>
-            <a href="hearing-aids.html">Hearing Aids</a>
-            <a href="https://link.clover.com/urlshortener/t2t9LL" target="_blank" rel="noopener noreferrer">Pay Online</a>
+            <a href="services.html#cochlear-implants">Cochlear Implant Services</a>
+            <a href="services.html#cerumen-removal">Cerumen (Ear Wax) Removal</a>
           </div>
         </div>
         <div>
@@ -273,7 +294,7 @@
           </div>
           <div class="footer__contact-item">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><polyline points="22,4 12,13 2,4"/></svg>
-            <a href="mailto:kristin@hinderliterhearing.com">kristin@hinderliterhearing.com</a>
+            <a href="mailto:staff@hinderliterhearing.com">staff@hinderliterhearing.com</a>
           </div>
           <div class="footer__contact-item">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
