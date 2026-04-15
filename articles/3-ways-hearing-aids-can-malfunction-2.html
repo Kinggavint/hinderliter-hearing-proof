@@ -4,199 +4,85 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>How to Drive Safely When You Have Hearing Loss | Hinderliter Hearing Services</title>
-  <meta name="description" content="Don&#x27;t let hearing loss stop you from getting behind the wheel.">
-  <link rel="canonical" href="https://hinderliterhearing.com/articles/3-ways-hearing-aids-can-malfunction-2.html">
+  <meta name="description" content="Many older individuals have hearing loss, but does that mean it's dangerous for them to drive? Driving habits vary amongst different people so the…">
+  <meta property="og:title" content="How to Drive Safely When You Have Hearing Loss">
+  <meta property="og:description" content="Many older individuals have hearing loss, but does that mean it's dangerous for them to drive? Driving habits vary amongst different people so the…">
+  <meta property="og:type" content="article">
+  <link rel="stylesheet" href="../styles.css">
   <link rel="icon" type="image/png" href="../assets/logo.png">
   <style>
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Playfair+Display:wght@700&display=swap');
 
-  /* ── Reset & Base ── */
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  html { font-size: 16px; scroll-behavior: smooth; }
-  body { font-family: 'Source Sans 3', 'Source Sans Pro', sans-serif; color: #2C3E50; background: #fff; line-height: 1.65; }
-  img { max-width: 100%; height: auto; display: block; }
-  a { color: #2AAFB5; text-decoration: none; }
-  a:hover { text-decoration: underline; }
+.hhs-cat-badge {
+  display: inline-block;
+  font-family: 'Source Sans 3', sans-serif;
+}
 
-  /* ── Fonts ── */
-  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+3:wght@300;400;600;700&display=swap');
 
-  /* ── Variables ── */
-  :root {
-    --teal: #2AAFB5;
-    --teal-dark: #1D8A8F;
-    --teal-light: #E8F7F8;
-    --beige: #F5F0EB;
-    --text: #2C3E50;
-    --text-muted: #5D6D7E;
-    --border: #E2E8F0;
-    --white: #ffffff;
-    --shadow: 0 2px 8px rgba(0,0,0,0.08);
-    --shadow-md: 0 4px 16px rgba(0,0,0,0.12);
-    --radius: 10px;
-    --radius-lg: 16px;
-  }
-
-  /* ── Layout ── */
-  .hhs-container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-
-  /* ── Top Bar ── */
-  .hhs-top-bar { background: #1D8A8F; color: #fff; font-size: 0.82rem; padding: 8px 0; }
-  .hhs-top-bar .hhs-container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
-  .hhs-top-bar__left { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
-  .hhs-top-bar__item { display: flex; align-items: center; gap: 6px; }
-  .hhs-top-bar__item svg { width: 14px; height: 14px; flex-shrink: 0; }
-  .hhs-top-bar__item a { color: #fff; }
-  .hhs-top-bar__right { display: flex; align-items: center; gap: 8px; }
-  .hhs-top-bar__cta { display: inline-flex; align-items: center; gap: 6px; padding: 5px 14px; background: #2AAFB5; color: #fff !important; border-radius: 4px; font-weight: 600; font-size: 0.8rem; transition: opacity 0.2s; text-decoration: none; }
-  .hhs-top-bar__cta:hover { opacity: 0.9; text-decoration: none; }
-
-  /* ── Header ── */
-  .hhs-header { background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); position: sticky; top: 0; z-index: 100; }
-  .hhs-header .hhs-container { display: flex; align-items: center; gap: 24px; padding-top: 8px; padding-bottom: 8px; }
-  .hhs-header__logo { flex-shrink: 0; }
-  .hhs-header__nav { display: flex; align-items: center; gap: 4px; margin-left: auto; flex-wrap: wrap; }
-  .hhs-header__nav > a, .hhs-nav-dropdown > a { color: var(--text); font-weight: 600; font-size: 0.9rem; padding: 8px 10px; border-radius: 6px; transition: background 0.2s, color 0.2s; white-space: nowrap; }
-  .hhs-header__nav > a:hover, .hhs-nav-dropdown > a:hover { background: var(--teal-light); color: var(--teal-dark); text-decoration: none; }
-  .hhs-header__phone { display: inline-flex; align-items: center; gap: 6px; background: var(--teal); color: #fff !important; padding: 8px 16px; border-radius: 6px; font-weight: 700; font-size: 0.9rem; white-space: nowrap; }
-  .hhs-header__phone:hover { background: var(--teal-dark); text-decoration: none; }
-  .hhs-header__phone svg { width: 16px; height: 16px; }
-
-  /* ── Nav Dropdown ── */
-  .hhs-nav-dropdown { position: relative; }
-  .hhs-nav-dropdown__trigger { display: flex; align-items: center; gap: 4px; cursor: pointer; }
-  .hhs-nav-dropdown__menu { display: none; position: absolute; top: 100%; left: 0; background: #fff; border-radius: var(--radius); box-shadow: var(--shadow-md); min-width: 240px; padding: 8px 0; z-index: 200; border: 1px solid var(--border); }
-  .hhs-nav-dropdown:hover .hhs-nav-dropdown__menu { display: block; }
-  .hhs-nav-dropdown__menu a { display: block; padding: 10px 20px; color: var(--text); font-size: 0.88rem; font-weight: 500; transition: background 0.15s; }
-  .hhs-nav-dropdown__menu a:hover { background: var(--teal-light); color: var(--teal-dark); text-decoration: none; }
-
-  /* ── Mobile Toggle ── */
-  .hhs-header__mobile-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; margin-left: auto; }
-  .hhs-header__mobile-toggle span,
-  .hhs-header__mobile-toggle span::before,
-  .hhs-header__mobile-toggle span::after { display: block; width: 24px; height: 2px; background: var(--text); border-radius: 2px; position: relative; transition: transform 0.3s; }
-  .hhs-header__mobile-toggle span::before { content: ''; position: absolute; top: -7px; left: 0; }
-  .hhs-header__mobile-toggle span::after { content: ''; position: absolute; top: 7px; left: 0; }
-  .hhs-mobile-overlay { display: none; }
-
-  /* ── Footer ── */
-  .hhs-footer { background: #1a2e35; color: rgba(255,255,255,0.85); padding: 60px 0 0; margin-top: 80px; }
-  .hhs-footer__grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 40px; padding-bottom: 40px; }
-  .hhs-footer__brand p { font-size: 0.9rem; color: rgba(255,255,255,0.7); margin-top: 16px; line-height: 1.6; }
-  .hhs-footer__heading { color: #fff; font-size: 1rem; font-weight: 700; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.5px; }
-  .hhs-footer__links { display: flex; flex-direction: column; gap: 8px; }
-  .hhs-footer__links a { color: rgba(255,255,255,0.7); font-size: 0.88rem; transition: color 0.2s; }
-  .hhs-footer__links a:hover { color: var(--teal); text-decoration: none; }
-  .hhs-footer__contact-item { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px; font-size: 0.88rem; }
-  .hhs-footer__contact-item svg { width: 16px; height: 16px; flex-shrink: 0; margin-top: 2px; color: var(--teal); }
-  .hhs-footer__contact-item a { color: rgba(255,255,255,0.7); }
-  .hhs-footer__contact-item a:hover { color: var(--teal); text-decoration: none; }
-  .hhs-footer__social { display: flex; gap: 10px; margin-top: 16px; }
-  .hhs-footer__social-link { display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.1); transition: background 0.2s; }
-  .hhs-footer__social-link:hover { background: rgba(255,255,255,0.2); text-decoration: none; }
-  .hhs-footer__bottom { border-top: 1px solid rgba(255,255,255,0.1); padding: 20px 0; text-align: center; }
-  .hhs-footer__bottom p { font-size: 0.85rem; color: rgba(255,255,255,0.5); }
-
-  /* ── Responsive ── */
-  @media (max-width: 1024px) {
-    .hhs-header__nav { gap: 2px; }
-    .hhs-header__nav > a, .hhs-nav-dropdown > a { font-size: 0.83rem; padding: 7px 7px; }
-  }
-  @media (max-width: 768px) {
-    .hhs-top-bar__left { display: none; }
-    .hhs-header__nav { display: none; }
-    .hhs-header__mobile-toggle { display: block; }
-    .hhs-footer__grid { grid-template-columns: 1fr 1fr; gap: 30px; }
-  }
-  @media (max-width: 480px) {
-    .hhs-footer__grid { grid-template-columns: 1fr; }
-    .hhs-top-bar .hhs-container { justify-content: center; }
-  }
-
-  /* ── Article Page ── */
-  .hhs-art-breadcrumb { padding: 14px 0; font-size: 0.82rem; color: var(--text-muted); border-bottom: 1px solid var(--border); }
-  .hhs-art-breadcrumb a { color: var(--teal); }
-  .hhs-art-breadcrumb span { margin: 0 6px; }
-  .hhs-art-back { display: inline-flex; align-items: center; gap: 6px; color: var(--teal); font-weight: 600; font-size: 0.9rem; padding: 12px 0; }
-  .hhs-art-back:hover { text-decoration: underline; }
-
-  .hhs-art-layout { display: grid; grid-template-columns: 1fr 300px; gap: 48px; padding: 40px 0 60px; align-items: start; }
-
-  /* Article Main */
-  .hhs-art-main {}
-  .hhs-art-hero-img { width: 100%; max-height: 420px; object-fit: cover; border-radius: var(--radius-lg); margin-bottom: 32px; }
-  .hhs-art-meta { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; flex-wrap: wrap; }
-  .hhs-art-date { font-size: 0.85rem; color: var(--text-muted); }
-  .hhs-art-title { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(1.5rem, 4vw, 2.3rem); font-weight: 700; color: var(--text); line-height: 1.25; margin-bottom: 28px; }
-  
-  /* Article Body */
-  .hhs-art-body { font-size: 1.05rem; line-height: 1.75; color: #3a3a3a; }
-  .hhs-art-body p { margin-bottom: 1.25em; }
-  .hhs-art-body h2 { font-family: 'Playfair Display', Georgia, serif; font-size: 1.45rem; font-weight: 700; color: var(--text); margin: 2em 0 0.75em; padding-bottom: 8px; border-bottom: 2px solid var(--teal-light); }
-  .hhs-art-body h3 { font-family: 'Playfair Display', Georgia, serif; font-size: 1.2rem; font-weight: 700; color: var(--text); margin: 1.75em 0 0.5em; }
-  .hhs-art-body h4 { font-size: 1.05rem; font-weight: 700; color: var(--text); margin: 1.5em 0 0.5em; }
-  .hhs-art-body ul, .hhs-art-body ol { padding-left: 1.5em; margin-bottom: 1.25em; }
-  .hhs-art-body li { margin-bottom: 0.5em; }
-  .hhs-art-body strong { font-weight: 700; }
-  .hhs-art-body em { font-style: italic; }
-  .hhs-art-body a { color: var(--teal); text-decoration: underline; }
-  .hhs-art-body a:hover { color: var(--teal-dark); }
-  .hhs-art-body figure { margin: 2em 0; }
-  .hhs-art-body figure img { width: 100%; border-radius: var(--radius); }
-  .hhs-art-body blockquote { border-left: 4px solid var(--teal); padding: 12px 20px; margin: 1.5em 0; background: var(--teal-light); border-radius: 0 var(--radius) var(--radius) 0; font-style: italic; color: var(--text-muted); }
-  .hhs-art-body hr { border: none; border-top: 2px solid var(--border); margin: 2em 0; }
-  .hhs-art-body code { background: #f1f5f9; padding: 2px 6px; border-radius: 4px; font-size: 0.9em; }
-  .hhs-art-body img { max-width: 100%; border-radius: var(--radius); margin: 1em 0; }
-
-  /* CTA Box */
-  .hhs-art-cta { background: linear-gradient(135deg, #1D8A8F, #2AAFB5); border-radius: var(--radius-lg); padding: 36px; text-align: center; margin-top: 48px; color: #fff; }
-  .hhs-art-cta h3 { font-family: 'Playfair Display', Georgia, serif; font-size: 1.5rem; margin-bottom: 10px; }
-  .hhs-art-cta p { color: rgba(255,255,255,0.88); margin-bottom: 20px; font-size: 0.95rem; }
-  .hhs-art-cta a { display: inline-block; background: #fff; color: var(--teal-dark); font-weight: 700; padding: 13px 28px; border-radius: 8px; font-size: 1rem; transition: transform 0.2s; text-decoration: none; }
-  .hhs-art-cta a:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.15); text-decoration: none; }
-
-  /* Sidebar */
-  .hhs-art-sidebar { position: sticky; top: 120px; }
-  .hhs-sidebar-widget { background: var(--beige); border-radius: var(--radius-lg); padding: 24px; margin-bottom: 24px; }
-  .hhs-sidebar-widget h3 { font-family: 'Playfair Display', Georgia, serif; font-size: 1.1rem; font-weight: 700; color: var(--text); margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid rgba(42,175,181,0.2); }
-  .hhs-sidebar-link { display: block; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.07); color: var(--text); font-size: 0.88rem; line-height: 1.4; }
-  .hhs-sidebar-link:last-child { border-bottom: none; }
-  .hhs-sidebar-link:hover { color: var(--teal); text-decoration: none; }
-  .hhs-sidebar-link .hhs-badge { font-size: 0.7rem; margin-bottom: 3px; display: inline-block; }
-  .hhs-sidebar-link-title { display: block; font-weight: 600; }
-  .hhs-sidebar-cta { background: var(--teal); border-radius: var(--radius-lg); padding: 24px; text-align: center; }
-  .hhs-sidebar-cta h3 { color: #fff; margin-bottom: 10px; font-size: 1rem; }
-  .hhs-sidebar-cta p { color: rgba(255,255,255,0.85); font-size: 0.85rem; margin-bottom: 16px; }
-  .hhs-sidebar-cta a { display: block; background: #fff; color: var(--teal-dark); font-weight: 700; padding: 10px; border-radius: 6px; font-size: 0.9rem; text-decoration: none; }
-  .hhs-sidebar-cta a:hover { background: var(--beige); text-decoration: none; }
-
-  @media (max-width: 900px) {
-    .hhs-art-layout { grid-template-columns: 1fr; }
-    .hhs-art-sidebar { position: static; }
-  }
-
+.hhs-art-hero { width: 100%; overflow: hidden; background: linear-gradient(135deg, #1D8A8F, #2AAFB5); display: flex; align-items: center; justify-content: center; }
+.hhs-art-hero img { width: 100%; max-height: 480px; object-fit: cover; display: block; }
+.hhs-art-hero__placeholder { height: 300px; display: flex; align-items: center; justify-content: center; width: 100%; background: linear-gradient(135deg, #1D8A8F 0%, #2AAFB5 100%); }
+.hhs-art-hero__placeholder-icon { opacity: 0.35; }
+.hhs-breadcrumb { background: #F5F0EB; padding: 12px 0; border-bottom: 1px solid #e2e8f0; }
+.hhs-breadcrumb__inner { max-width: 900px; margin: 0 auto; padding: 0 24px; font-family: 'Source Sans 3', sans-serif; font-size: 0.85rem; color: #718096; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.hhs-breadcrumb a { color: #2AAFB5; text-decoration: none; }
+.hhs-breadcrumb a:hover { text-decoration: underline; }
+.hhs-breadcrumb__sep { color: #cbd5e0; }
+.hhs-art-wrap { max-width: 1200px; margin: 0 auto; padding: 48px 24px; display: grid; grid-template-columns: 1fr 320px; gap: 48px; align-items: start; }
+@media (max-width: 900px) { .hhs-art-wrap { grid-template-columns: 1fr; } .hhs-art-sidebar { order: 2; } .hhs-art-main { order: 1; } }
+.hhs-art-header { margin-bottom: 32px; }
+.hhs-art-meta { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; flex-wrap: wrap; }
+.hhs-art-title { font-family: 'Playfair Display', serif; font-size: clamp(1.5rem, 4vw, 2.25rem); font-weight: 700; color: #1a2e2f; line-height: 1.25; margin: 0 0 8px; }
+.hhs-art-body { font-family: 'Source Sans 3', sans-serif; color: #2d3748; }
+.hhs-art-p { font-size: 1.0625rem; line-height: 1.75; margin: 0 0 1.25em; }
+.hhs-art-h2 { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 700; color: #1a2e2f; margin: 2em 0 0.75em; line-height: 1.3; }
+.hhs-art-h3 { font-family: 'Source Sans 3', sans-serif; font-size: 1.2rem; font-weight: 700; color: #2AAFB5; margin: 1.75em 0 0.6em; line-height: 1.3; }
+.hhs-art-h4 { font-family: 'Source Sans 3', sans-serif; font-size: 1.05rem; font-weight: 700; color: #1a2e2f; margin: 1.5em 0 0.5em; }
+.hhs-art-link { color: #2AAFB5; text-decoration: underline; }
+.hhs-art-link:hover { color: #1D8A8F; }
+.hhs-art-inline-img { max-width: 100%; height: auto; border-radius: 8px; margin: 1.5em 0; display: block; }
+.hhs-art-cta { background: linear-gradient(135deg, #1D8A8F, #2AAFB5); border-radius: 12px; padding: 32px; text-align: center; margin-top: 48px; color: #fff; }
+.hhs-art-cta h3 { font-family: 'Playfair Display', serif; font-size: 1.4rem; margin: 0 0 10px; }
+.hhs-art-cta p { font-family: 'Source Sans 3', sans-serif; font-size: 1rem; opacity: 0.9; margin: 0 0 20px; }
+.hhs-art-cta a { display: inline-block; padding: 12px 28px; background: #fff; color: #1D8A8F; border-radius: 8px; font-family: 'Source Sans 3', sans-serif; font-weight: 700; font-size: 0.9375rem; text-decoration: none; transition: transform 0.2s; }
+.hhs-art-cta a:hover { transform: translateY(-2px); }
+.hhs-art-sidebar { position: sticky; top: 24px; }
+.hhs-art-sidebar-box { background: #F5F0EB; border-radius: 10px; padding: 24px; margin-bottom: 24px; }
+.hhs-art-sidebar-title { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; color: #1a2e2f; margin: 0 0 16px; padding-bottom: 12px; border-bottom: 2px solid #2AAFB5; }
+.hhs-related-item { margin-bottom: 16px; padding-bottom: 16px; border-bottom: 1px solid #e2e8f0; }
+.hhs-related-item:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+.hhs-related-item a { font-family: 'Source Sans 3', sans-serif; font-size: 0.9rem; font-weight: 600; color: #1a2e2f; text-decoration: none; line-height: 1.4; display: block; margin-bottom: 4px; }
+.hhs-related-item a:hover { color: #2AAFB5; }
+.hhs-related-item__cat { font-size: 0.75rem; }
+.hhs-sidebar-cta { background: linear-gradient(135deg, #1D8A8F, #2AAFB5); border-radius: 10px; padding: 24px; text-align: center; color: #fff; }
+.hhs-sidebar-cta h4 { font-family: 'Playfair Display', serif; font-size: 1rem; margin: 0 0 8px; }
+.hhs-sidebar-cta p { font-family: 'Source Sans 3', sans-serif; font-size: 0.85rem; opacity: 0.9; margin: 0 0 16px; }
+.hhs-sidebar-cta a { display: inline-block; padding: 10px 20px; background: #fff; color: #1D8A8F; border-radius: 6px; font-family: 'Source Sans 3', sans-serif; font-weight: 700; font-size: 0.875rem; text-decoration: none; }
+.hhs-back-link { display: inline-flex; align-items: center; gap: 6px; font-family: 'Source Sans 3', sans-serif; font-size: 0.875rem; color: #2AAFB5; text-decoration: none; margin-bottom: 24px; }
+.hhs-back-link:hover { color: #1D8A8F; }
   </style>
 </head>
 <body>
 
   <!-- Top Bar -->
-  <div class="hhs-top-bar">
-    <div class="hhs-container">
-      <div class="hhs-top-bar__left">
-        <span class="hhs-top-bar__item">
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-bar__left">
+        <span class="top-bar__item">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
           751 Chestnut St., Suite 203, Birmingham, MI 48009
         </span>
-        <span class="hhs-top-bar__item">
+        <span class="top-bar__item">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
           <a href="tel:248-430-4416">248-430-4416</a>
         </span>
       </div>
-      <div class="hhs-top-bar__right">
-        <a href="https://link.clover.com/urlshortener/t2t9LL" class="hhs-top-bar__cta" target="_blank" rel="noopener noreferrer" style="background:#E8A317;">
+      <div class="top-bar__right">
+        <a href="https://link.clover.com/urlshortener/t2t9LL" class="top-bar__cta" target="_blank" rel="noopener noreferrer" style="background:#E8A317;">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
           Pay Online
         </a>
-        <a href="tel:248-430-4416" class="hhs-top-bar__cta">
+        <a href="tel:248-430-4416" class="top-bar__cta">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
           Call or Text Us
         </a>
@@ -205,17 +91,17 @@
   </div>
 
   <!-- Header -->
-  <header class="hhs-header">
-    <div class="hhs-container">
-      <a href="../index.html" class="hhs-header__logo" aria-label="Hinderliter Hearing Services Home">
+  <header class="header">
+    <div class="container">
+      <a href="../index.html" class="header__logo" aria-label="Hinderliter Hearing Services Home">
         <img src="../assets/logo.png" alt="Hinderliter Hearing Services logo" style="height:80px;width:auto;">
       </a>
-      <nav class="hhs-header__nav" aria-label="Main navigation">
+      <nav class="header__nav" aria-label="Main navigation">
         <a href="../index.html">Home</a>
         <a href="../about.html">About</a>
-        <div class="hhs-nav-dropdown">
-          <a href="../services.html" class="hhs-nav-dropdown__trigger">Services <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="12" height="12"><polyline points="6 9 12 15 18 9"/></svg></a>
-          <div class="hhs-nav-dropdown__menu">
+        <div class="nav-dropdown">
+          <a href="../services.html" class="nav-dropdown__trigger">Services <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="12" height="12"><polyline points="6 9 12 15 18 9"/></svg></a>
+          <div class="nav-dropdown__menu">
             <a href="../services.html#hearing-tests">Diagnostic Hearing Evaluations</a>
             <a href="../services.html#hearing-aids">Hearing Aids</a>
             <a href="../services.html#hearing-repair">Hearing Aid Repair</a>
@@ -228,134 +114,145 @@
         <a href="../hearing-aids.html">Hearing Aids</a>
         <a href="../accessories.html">Accessories</a>
         <a href="../reviews.html">Reviews</a>
-        <a href="../learn-more.html">Learn More</a>
+        <a href="../learn-more.html" class="active">Learn More</a>
         <a href="../contact.html">Contact</a>
-        <a href="tel:248-430-4416" class="hhs-header__phone" aria-label="Call 248-430-4416">
+        <a href="tel:248-430-4416" class="header__phone" aria-label="Call 248-430-4416">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
           248-430-4416
         </a>
       </nav>
-      <button class="hhs-header__mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+      <button class="header__mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
         <span></span>
       </button>
     </div>
-    <div class="hhs-mobile-overlay"></div>
+    <div class="mobile-overlay"></div>
   </header>
 
-<nav class="hhs-art-breadcrumb" aria-label="Breadcrumb">
-      <div class="hhs-container">
-        <a href="../index.html">Home</a><span>›</span>
-        <a href="../learn-more.html">Learn More</a><span>›</span>
-        <a href="../learn-more.html">Hearing Loss</a><span>›</span>
-        <span>How to Drive Safely When You Have Hearing Loss</span>
-      </div>
-    </nav>
+  <!-- Announcement Banner -->
+  <div class="announcement">
+    Laurie and Sean are accepting new patients. <a href="../contact.html">Click here to contact us today.</a>
+  </div>
 
-  <main>
-    <div class="hhs-container">
-      <a href="../learn-more.html" class="hhs-art-back">← Back to Articles</a>
-
-      <div class="hhs-art-layout">
-        <!-- Article Main -->
-        <article class="hhs-art-main">
-          <img src="https://hmh-ea97.kxcdn.com/wp-content/uploads/2023/12/your_guide_to_confident_driving_with_hearing_loss_gettyimages-1164689284.jpg" alt="How to Drive Safely When You Have Hearing Loss" class="hhs-art-hero-img" loading="eager">
-          <div class="hhs-art-meta">
-            <span class="hhs-badge">Hearing Loss</span>
-            <span class="hhs-art-date">January 02, 2024</span>
-          </div>
-          <h1 class="hhs-art-title">How to Drive Safely When You Have Hearing Loss</h1>
-          <div class="hhs-art-body">
-<figure><img src="https://hmh-ea97.kxcdn.com/wp-content/uploads/2023/12/your_guide_to_confident_driving_with_hearing_loss_gettyimages-1164689284.jpg" alt="How to Drive Safely When You Have Hearing Loss" loading="lazy"></figure>
-<figure><img src="https://hmh-ea97.kxcdn.com/wp-content/uploads/2023/12/your*guide*to*confident*driving*with*hearing*loss*gettyimages-1164689284.jpg" alt="Older man behind the wheel of his car excited to drive since he solved his hearing loss." loading="lazy"></figure>
-<p>Many older individuals have hearing loss, but does that mean it's dangerous for them to drive? Driving habits vary amongst different people so the response isn't clear-cut.</p>
-<p>While hearing loss is a component to think about when operating a vehicle, a seasoned driver is still capable even if they need to adjust the radio volume.</p>
-<p>Whether hearing loss presents a risk while driving is a critical consideration for those planning everyday commutes or winter road trips. Is your hearing loss making you a unsafe driver?</p>
-<h2>Think beyond driving…</h2>
-<p>Early stage hearing loss probably won't negatively effect your driving, but if it's neglected, driving will become increasingly dangerous.</p>
-<p>Johns Hopkins Medicine reports there is a definite link between hearing and brain health. The brain has to work extra hard fighting to hear, which causes it to have fewer resources for other day-to-day tasks. It has a detrimental effect on cognition and can play a role in the onset of dementia. Driving is definitely off the table for someone who has dementia.</p>
-<h2>Should you drive if you have hearing loss?</h2>
-<p>You can continue to drive with hearing loss, but it should be mentioned that safe driving requires strong observational skills including auditory awareness. The Center for Hearing and Communication reports that about <strong>48 million Americans have substantial hearing loss,</strong> and a good portion of them still drive.</p>
-<h2>Driving with hearing loss</h2>
-<p>With some adjustments, you can still remain safe on the road. Here are some tips.</p>
-<h3>Quit procrastinating</h3>
-<p>Come in to see us for a hearing exam and find out if hearing aids will help your condition. Hearing aids can help get rid of the "should I be driving with hearing loss" question.</p>
-<h3>When you drive, be more observant</h3>
-<p>Even if you have hearing aids, you will still need to be a more aware driver to make sure you aren't missing anything in or surrounding your vehicle.</p>
-<h3>Keep the noise down inside your car</h3>
-<p>This will help you be less distracted. Ask your passengers to talk more quietly and keep the radio down or off.</p>
-<h3>Remember to look at your dashboard frequently</h3>
-<p>It's the little things that will mount up when you drive with hearing loss. You may not be capable of hearing that clicking sound that your turn signal makes, for example. So regularly check your dashboard because your eyes will need to pick up the slack.</p>
-<h3>Make maintenance a priority</h3>
-<p>Perhaps your car is making a weird noise in the engine but you can't hear it. That is a major safety hazard, so make a point of having your car serviced regularly. For people with hearing loss, this is important, even more so than it would be for somebody without hearing loss.</p>
-<h3>Watch the other cars closely</h3>
-<p>Of course, you would do that anyway, but you want to watch for signs you might be missing something. You might not hear emergency sirens, for example, so if the cars are pulling off to the side, you should as well. Use the behavior of other drivers to get some visual clues about traffic patterns around you.</p>
-<p>Can you drive when you have hearing loss? That's up to you. It is possible to be a good driver even if your hearing isn't what it used to be because odds are your other senses will help you make the adjustment. But if you're feeling worried about it, make an appointment to come see if we can help you improve your situation, possibly with hearing aids.</p>
-<p>Come in and let us help you better your quality of life by investigating the hearing solutions that will be suitable for your distinctive hearing situation.</p>
-<p><a href="/location-contact/" target="_blank" rel="noopener">Call Today to Set Up an Appointment</a></p>
-<p>References</p>
-<p>https://www.hopkinsmedicine.org/health/wellness-and-prevention/the-hidden-risks-of-hearing-loss</p>
-<p>http://chchearing.org/facts-about-hearing-loss</p>
-<h2>Ready to Take the Next Step?</h2>
-<p>Schedule your appointment today and let our team of hearing care professionals help you hear better.</p>
-<p><a href="../contact.html" target="_blank" rel="noopener">Schedule an Appointment</a></p>
-          </div>
-
-          <!-- CTA Box -->
-          <div class="hhs-art-cta">
-            <h3>Ready to Improve Your Hearing?</h3>
-            <p>Schedule a comprehensive hearing evaluation with our expert audiologists in Birmingham, MI.</p>
-            <a href="../contact.html">Schedule Your Hearing Consultation</a>
-          </div>
-        </article>
-
-        <!-- Sidebar -->
-        <aside class="hhs-art-sidebar">
-          <div class="hhs-sidebar-widget">
-            <h3>Related Articles</h3>
-            <a href="../articles/does-hearing-loss-get-worse-as-you-age.html" class="hhs-sidebar-link">
-          <span class="hhs-badge">Hearing Loss</span>
-          <span class="hhs-sidebar-link-title">As We Get Older, Does Our Hearing Loss Worsen?</span>
-        </a><a href="../articles/diplacusis-hear-things-in-stereo.html" class="hhs-sidebar-link">
-          <span class="hhs-badge">Hearing Loss</span>
-          <span class="hhs-sidebar-link-title">Diplacusis: When You Hear Things in Stereo</span>
-        </a><a href="../articles/the-connection-between-hearing-loss-and-reduced-lifespan.html" class="hhs-sidebar-link">
-          <span class="hhs-badge">Hearing Loss</span>
-          <span class="hhs-sidebar-link-title">Connecting Hearing loss to a Shorter Life Expectancy</span>
-        </a><a href="../articles/airpods-as-hearing-aids-what-to-know-before-relying-on-them.html" class="hhs-sidebar-link">
-          <span class="hhs-badge">Hearing Loss</span>
-          <span class="hhs-sidebar-link-title">AirPods as a Substitute for Hearing Aids - Crucial Information to Cons</span>
-        </a>
-          </div>
-
-          <div class="hhs-sidebar-cta">
-            <h3>Have Questions?</h3>
-            <p>Our audiologists are here to help with all your hearing health needs.</p>
-            <a href="../contact.html">Contact Us Today</a>
-          </div>
-        </aside>
-      </div>
+  <div class="hhs-art-hero">
+    <div class="hhs-art-hero__placeholder">
+      <svg class="hhs-art-hero__placeholder-icon" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 17H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="M15 7h4a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-4"/><line x1="12" y1="2" x2="12" y2="22"/></svg>
     </div>
-  </main>
+  </div>
 
-  <!-- Footer -->
-  <footer class="hhs-footer">
-    <div class="hhs-container">
-      <div class="hhs-footer__grid">
-        <div class="hhs-footer__brand">
+  <!-- Breadcrumb -->
+  <nav class="hhs-breadcrumb" aria-label="Breadcrumb">
+    <div class="hhs-breadcrumb__inner">
+      <a href="../index.html">Home</a>
+      <span class="hhs-breadcrumb__sep">&#8250;</span>
+      <a href="../learn-more.html">Learn More</a>
+      <span class="hhs-breadcrumb__sep">&#8250;</span>
+      <span>How to Drive Safely When You Have Hearing Loss</span>
+    </div>
+  </nav>
+
+  <!-- Article -->
+  <div class="hhs-art-wrap">
+    <main class="hhs-art-main">
+      <a href="../learn-more.html" class="hhs-back-link">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+        Back to All Articles
+      </a>
+      <header class="hhs-art-header">
+        <div class="hhs-art-meta"><span class="hhs-cat-badge" style="background:#E8F5F5;color:#1D8A8F;padding:4px 12px;border-radius:20px;font-size:0.75rem;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;">Hearing Loss</span></div>
+        <h1 class="hhs-art-title">How to Drive Safely When You Have Hearing Loss</h1>
+      </header>
+      <article class="hhs-art-body">
+        <p class="hhs-art-p">Many older individuals have hearing loss, but does that mean it's dangerous for them to drive? Driving habits vary amongst different people so the response isn't clear-cut.</p>
+<p class="hhs-art-p">While hearing loss is a component to think about when operating a vehicle, a seasoned driver is still capable even if they need to adjust the radio volume.</p>
+<p class="hhs-art-p">Whether hearing loss presents a risk while driving is a critical consideration for those planning everyday commutes or winter road trips. Is your hearing loss making you a unsafe driver?</p>
+<h2 class="hhs-art-h2">Think beyond driving…</h2>
+<p class="hhs-art-p">Early stage hearing loss probably won't negatively effect your driving, but if it's neglected, driving will become increasingly dangerous.</p>
+<p class="hhs-art-p">Johns Hopkins Medicine reports there is a definite link between hearing and brain health. The brain has to work extra hard fighting to hear, which causes it to have fewer resources for other day-to-day tasks. It has a detrimental effect on cognition and can play a role in the onset of dementia. Driving is definitely off the table for someone who has dementia.</p>
+<h2 class="hhs-art-h2">Should you drive if you have hearing loss?</h2>
+<p class="hhs-art-p">You can continue to drive with hearing loss, but it should be mentioned that safe driving requires strong observational skills including auditory awareness. The Center for Hearing and Communication reports that about <strong>48 million Americans have substantial hearing loss,</strong> and a good portion of them still drive.</p>
+<h2 class="hhs-art-h2">Driving with hearing loss</h2>
+<p class="hhs-art-p">With some adjustments, you can still remain safe on the road. Here are some tips.</p>
+<h3 class="hhs-art-h3">Quit procrastinating</h3>
+<p class="hhs-art-p">Come in to see us for a hearing exam and find out if hearing aids will help your condition. Hearing aids can help get rid of the "should I be driving with hearing loss" question.</p>
+<h3 class="hhs-art-h3">When you drive, be more observant</h3>
+<p class="hhs-art-p">Even if you have hearing aids, you will still need to be a more aware driver to make sure you aren't missing anything in or surrounding your vehicle.</p>
+<h3 class="hhs-art-h3">Keep the noise down inside your car</h3>
+<p class="hhs-art-p">This will help you be less distracted. Ask your passengers to talk more quietly and keep the radio down or off.</p>
+<h3 class="hhs-art-h3">Remember to look at your dashboard frequently</h3>
+<p class="hhs-art-p">It's the little things that will mount up when you drive with hearing loss. You may not be capable of hearing that clicking sound that your turn signal makes, for example. So regularly check your dashboard because your eyes will need to pick up the slack.</p>
+<h3 class="hhs-art-h3">Make maintenance a priority</h3>
+<p class="hhs-art-p">Perhaps your car is making a weird noise in the engine but you can't hear it. That is a major safety hazard, so make a point of having your car serviced regularly. For people with hearing loss, this is important, even more so than it would be for somebody without hearing loss.</p>
+<h3 class="hhs-art-h3">Watch the other cars closely</h3>
+<p class="hhs-art-p">Of course, you would do that anyway, but you want to watch for signs you might be missing something. You might not hear emergency sirens, for example, so if the cars are pulling off to the side, you should as well. Use the behavior of other drivers to get some visual clues about traffic patterns around you.</p>
+<p class="hhs-art-p">Can you drive when you have hearing loss? That's up to you. It is possible to be a good driver even if your hearing isn't what it used to be because odds are your other senses will help you make the adjustment. But if you're feeling worried about it, make an appointment to come see if we can help you improve your situation, possibly with hearing aids.</p>
+<p class="hhs-art-p">Come in and let us help you better your quality of life by investigating the hearing solutions that will be suitable for your distinctive hearing situation.</p>
+<p class="hhs-art-p"><a href="/location-contact/" class="hhs-art-link">Call Today to Set Up an Appointment</a></p>
+<p class="hhs-art-p">References</p>
+<p class="hhs-art-p">https://www.hopkinsmedicine.org/health/wellness-and-prevention/the-hidden-risks-of-hearing-loss</p>
+<p class="hhs-art-p">http://chchearing.org/facts-about-hearing-loss</p>
+<h2 class="hhs-art-h2">Ready to Take the Next Step?</h2>
+<p class="hhs-art-p">Schedule your appointment today and let our team of hearing care professionals help you hear better.</p>
+<p class="hhs-art-p"><a href="../contact.html" class="hhs-art-link">Schedule an Appointment</a></p>
+<h3 class="hhs-art-h3">Ready to Improve Your Hearing?</h3>
+<p class="hhs-art-p">Schedule a comprehensive hearing evaluation with our expert audiologists in Birmingham, MI.</p>
+<p class="hhs-art-p">            <a href="../contact.html" class="hhs-art-link">Schedule Your Hearing Consultation</a></p>
+      </article>
+      <div class="hhs-art-cta">
+        <h3>Ready to Improve Your Hearing?</h3>
+        <p>Schedule a comprehensive hearing evaluation with our expert team in Birmingham, MI.</p>
+        <a href="../contact.html">Schedule Your Appointment</a>
+      </div>
+    </main>
+
+    <aside class="hhs-art-sidebar">
+      <div class="hhs-art-sidebar-box">
+        <h2 class="hhs-art-sidebar-title">Related Articles</h2>
+        <div class="hhs-related-item">
+          <a href="../articles/hearing-loss-health-problems.html">4 Ways Hearing Loss Can Impact Your Overall Health</a>
+          <span class="hhs-related-item__cat"><span class="hhs-cat-badge" style="background:#E8F5F5;color:#1D8A8F;padding:3px 10px;border-radius:20px;font-size:0.7rem;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;">Hearing Loss</span></span>
+        </div>
+        <div class="hhs-related-item">
+          <a href="../articles/6-reasons-to-have-regular-hearing-tests.html">6 Reasons to Get Your Hearing Assessed Regularly</a>
+          <span class="hhs-related-item__cat"><span class="hhs-cat-badge" style="background:#E8F5F5;color:#1D8A8F;padding:3px 10px;border-radius:20px;font-size:0.7rem;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;">Hearing Loss</span></span>
+        </div>
+        <div class="hhs-related-item">
+          <a href="../articles/8-signs-hearing-failing.html">8 Discrete Indications Your Hearing is Faltering</a>
+          <span class="hhs-related-item__cat"><span class="hhs-cat-badge" style="background:#E8F5F5;color:#1D8A8F;padding:3px 10px;border-radius:20px;font-size:0.7rem;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;">Hearing Loss</span></span>
+        </div>
+        <div class="hhs-related-item">
+          <a href="../articles/8-tips-for-national-protect-your-hearing-month.html">8 Tips for National Protect Your Hearing Month</a>
+          <span class="hhs-related-item__cat"><span class="hhs-cat-badge" style="background:#E8F5F5;color:#1D8A8F;padding:3px 10px;border-radius:20px;font-size:0.7rem;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;">Hearing Loss</span></span>
+        </div>
+      </div>
+      <div class="hhs-sidebar-cta">
+        <h4>Questions About Your Hearing?</h4>
+        <p>Our expert audiologists are here to help. Contact us today.</p>
+        <a href="../contact.html">Contact Us</a>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
           <img src="../assets/logo.png" alt="Hinderliter Hearing Services" style="height:60px;width:auto;">
           <p>Giving the gift of hearing since 2003. Comprehensive audiology care in Birmingham, MI.</p>
-          <div class="hhs-footer__social">
-            <a href="https://www.google.com/maps/place/Hinderliter+Hearing+Services/@42.5449739,-83.2090905,17z/data=!3m1!4b1!4m6!3m5!1s0x8824c7aabd798c8b:0xdd4b378d737d2da5!8m2!3d42.5449739!4d-83.2090905!16s%2Fg%2F11g5_f07cm" target="_blank" rel="noopener noreferrer" aria-label="Google Business Profile" class="hhs-footer__social-link">
+          <div class="footer__social" style="display:flex;gap:var(--space-3);margin-top:var(--space-4);">
+            <a href="https://www.google.com/maps/place/Hinderliter+Hearing+Services/@42.5449739,-83.2090905,17z/" target="_blank" rel="noopener noreferrer" aria-label="Google Business Profile" style="display:flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.1);" onmouseover="this.style.background='rgba(255,255,255,0.2)'" onmouseout="this.style.background='rgba(255,255,255,0.1)'">
               <svg width="20" height="20" viewBox="0 0 24 24"><path fill="#fff" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/><path fill="#fff" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#fff" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18A10.04 10.04 0 0 0 1.09 12c0 1.62.39 3.14 1.09 4.49l3.66-2.84z"/><path fill="#fff" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
             </a>
-            <a href="https://www.facebook.com/hinderliterhearing/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="hhs-footer__social-link">
+            <a href="https://www.facebook.com/hinderliterhearing/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" style="display:flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.1);" onmouseover="this.style.background='rgba(255,255,255,0.2)'" onmouseout="this.style.background='rgba(255,255,255,0.1)'">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="#fff"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
             </a>
           </div>
+          <div class="footer__award">
+            <img src="../assets/nextdoor-award.jpg" alt="Nextdoor Neighborhood Favorite Award" width="100" height="80">
+          </div>
         </div>
         <div>
-          <h3 class="hhs-footer__heading">Quick Links</h3>
-          <div class="hhs-footer__links">
+          <h3 class="footer__heading">Quick Links</h3>
+          <div class="footer__links">
             <a href="../index.html">Home</a>
             <a href="../about.html">About Us</a>
             <a href="../services.html">Services</a>
@@ -367,8 +264,8 @@
           </div>
         </div>
         <div>
-          <h3 class="hhs-footer__heading">Services</h3>
-          <div class="hhs-footer__links">
+          <h3 class="footer__heading">Services</h3>
+          <div class="footer__links">
             <a href="../services.html#hearing-tests">Diagnostic Hearing Evaluations</a>
             <a href="../services.html#hearing-aids">Hearing Aids</a>
             <a href="../services.html#hearing-repair">Hearing Aid Repair</a>
@@ -379,31 +276,32 @@
           </div>
         </div>
         <div>
-          <h3 class="hhs-footer__heading">Contact Us</h3>
-          <div class="hhs-footer__contact-item">
+          <h3 class="footer__heading">Contact Us</h3>
+          <div class="footer__contact-item">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
             <span>751 Chestnut St., Suite 203<br>Birmingham, MI 48009</span>
           </div>
-          <div class="hhs-footer__contact-item">
+          <div class="footer__contact-item">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
             <a href="tel:248-430-4416">248-430-4416</a>
           </div>
-          <div class="hhs-footer__contact-item">
+          <div class="footer__contact-item">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><polyline points="22,4 12,13 2,4"/></svg>
             <a href="mailto:staff@hinderliterhearing.com">staff@hinderliterhearing.com</a>
           </div>
-          <div class="hhs-footer__contact-item">
+          <div class="footer__contact-item">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
             <span>Mon&ndash;Thu: 8am&ndash;5pm<br>Fri: 9am&ndash;3pm</span>
           </div>
         </div>
       </div>
-      <div class="hhs-footer__bottom">
+      <div class="footer__bottom">
         <p>&copy; 2026 Hinderliter Hearing Services. All rights reserved.</p>
       </div>
     </div>
   </footer>
 
   <script src="../main.js"></script>
+
 </body>
 </html>
