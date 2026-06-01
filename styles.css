@@ -8,8 +8,21 @@
 /* === Design Tokens === */
 
 /* About page change requests */
-/* Bigger headline per client request 2026-06-01 */
-.about-trusted-team-title{color:var(--color-primary);font-size:clamp(2.75rem,4.2vw,4.25rem);font-weight:900;letter-spacing:.01em;line-height:1.15;}
+/* Bigger, centered, display headline per client request 2026-06-01 */
+.about-trusted-team-title{
+  display:block;
+  width:100%;
+  max-width:980px;
+  margin:0 auto var(--space-6) auto;
+  text-align:center;
+  color:var(--color-primary);
+  font-family:var(--font-display);
+  font-size:clamp(2.25rem,5vw,3.75rem);
+  font-weight:700;
+  letter-spacing:-0.01em;
+  line-height:1.15;
+  text-transform:none;
+}
 .about-section-label{color:var(--color-primary);font-size:clamp(1.6rem,2.2vw,2.1rem);font-weight:900;letter-spacing:.01em;}
 
 /* White-background hero variant (About page, per client request 2026-06-01) */
