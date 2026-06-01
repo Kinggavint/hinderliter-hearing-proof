@@ -8,8 +8,17 @@
 /* === Design Tokens === */
 
 /* About page change requests */
-.about-trusted-team-title{color:var(--color-primary);font-size:clamp(2.25rem,3.2vw,3.25rem);font-weight:900;letter-spacing:.01em;}
+/* Bigger headline per client request 2026-06-01 */
+.about-trusted-team-title{color:var(--color-primary);font-size:clamp(2.75rem,4.2vw,4.25rem);font-weight:900;letter-spacing:.01em;line-height:1.15;}
 .about-section-label{color:var(--color-primary);font-size:clamp(1.6rem,2.2vw,2.1rem);font-weight:900;letter-spacing:.01em;}
+
+/* White-background hero variant (About page, per client request 2026-06-01) */
+.hero.hero--light{background:#ffffff;}
+.hero.hero--light .hero__overlay{display:none;}
+.hero.hero--light .hero__bg{display:none;}
+.hero.hero--light .hero__title{color:#111111;}
+.hero.hero--light .hero__text{color:#111111;}
+.hero.hero--light .hero__content{color:#111111;}
 
 :root {
   /* Typography */
