@@ -32,6 +32,11 @@
         "latitude": 42.5449739,
         "longitude": -83.2090905
       },
+      "hasMap": "https://www.google.com/maps/place/Hinderliter+Hearing+Services/@42.5449739,-83.2090905,17z/data=!3m1!4b1!4m6!3m5!1s0x8824c7aabd798c8b:0xdd4b378d737d2da5!8m2!3d42.5449739!4d-83.2090905!16s%2Fg%2F11g5_f07cm",
+      "sameAs": [
+        "https://www.facebook.com/hinderliterhearing/",
+        "https://www.google.com/maps/place/Hinderliter+Hearing+Services/@42.5449739,-83.2090905,17z/data=!3m1!4b1!4m6!3m5!1s0x8824c7aabd798c8b:0xdd4b378d737d2da5!8m2!3d42.5449739!4d-83.2090905!16s%2Fg%2F11g5_f07cm"
+      ],
       "areaServed": [
         {"@type": "AdministrativeArea", "name": "Oakland County, Michigan"},
         {"@type": "City", "name": "Birmingham, Michigan"},
