@@ -2,7 +2,10 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": ["MedicalBusiness", "LocalBusiness"],
+      "@type": [
+        "MedicalBusiness",
+        "LocalBusiness"
+      ],
       "@id": "https://hinderliterhearing.com/#business",
       "name": "Hinderliter Hearing Services",
       "alternateName": "Hinderliter Hearing",
@@ -35,40 +38,136 @@
       "hasMap": "https://www.google.com/maps/place/Hinderliter+Hearing+Services/@42.5449739,-83.2090905,17z/data=!3m1!4b1!4m6!3m5!1s0x8824c7aabd798c8b:0xdd4b378d737d2da5!8m2!3d42.5449739!4d-83.2090905!16s%2Fg%2F11g5_f07cm",
       "sameAs": [
         "https://www.facebook.com/hinderliterhearing/",
-        "https://www.google.com/maps/place/Hinderliter+Hearing+Services/@42.5449739,-83.2090905,17z/data=!3m1!4b1!4m6!3m5!1s0x8824c7aabd798c8b:0xdd4b378d737d2da5!8m2!3d42.5449739!4d-83.2090905!16s%2Fg%2F11g5_f07cm"
+        "https://www.google.com/maps/place/Hinderliter+Hearing+Services/@42.5449739,-83.2090905,17z/data=!3m1!4b1!4m6!3m5!1s0x8824c7aabd798c8b:0xdd4b378d737d2da5!8m2!3d42.5449739!4d-83.2090905!16s%2Fg%2F11g5_f07cm",
+        "https://www.google.com/maps/place/Hinderliter+Hearing+Services/@42.5449739,-83.2090905,17z",
+        "https://www.healthyhearing.com/hearing-aids/36180-hinderliter-hearing-services"
       ],
       "areaServed": [
-        {"@type": "AdministrativeArea", "name": "Oakland County, Michigan"},
-        {"@type": "City", "name": "Birmingham, Michigan"},
-        {"@type": "City", "name": "Bloomfield Hills, Michigan"},
-        {"@type": "City", "name": "Bloomfield Township, Michigan"},
-        {"@type": "City", "name": "Royal Oak, Michigan"},
-        {"@type": "City", "name": "Troy, Michigan"},
-        {"@type": "City", "name": "Beverly Hills, Michigan"},
-        {"@type": "City", "name": "Franklin, Michigan"},
-        {"@type": "City", "name": "Berkley, Michigan"},
-        {"@type": "City", "name": "Huntington Woods, Michigan"},
-        {"@type": "City", "name": "Pleasant Ridge, Michigan"},
-        {"@type": "City", "name": "Lathrup Village, Michigan"},
-        {"@type": "City", "name": "Southfield, Michigan"},
-        {"@type": "City", "name": "Clawson, Michigan"},
-        {"@type": "City", "name": "Ferndale, Michigan"},
-        {"@type": "City", "name": "Hazel Park, Michigan"},
-        {"@type": "City", "name": "Oak Park, Michigan"}
+        {
+          "@type": "AdministrativeArea",
+          "name": "Oakland County, Michigan"
+        },
+        {
+          "@type": "City",
+          "name": "Birmingham, Michigan"
+        },
+        {
+          "@type": "City",
+          "name": "Bloomfield Hills, Michigan"
+        },
+        {
+          "@type": "City",
+          "name": "Bloomfield Township, Michigan"
+        },
+        {
+          "@type": "City",
+          "name": "Royal Oak, Michigan"
+        },
+        {
+          "@type": "City",
+          "name": "Troy, Michigan"
+        },
+        {
+          "@type": "City",
+          "name": "Beverly Hills, Michigan"
+        },
+        {
+          "@type": "City",
+          "name": "Franklin, Michigan"
+        },
+        {
+          "@type": "City",
+          "name": "Berkley, Michigan"
+        },
+        {
+          "@type": "City",
+          "name": "Huntington Woods, Michigan"
+        },
+        {
+          "@type": "City",
+          "name": "Pleasant Ridge, Michigan"
+        },
+        {
+          "@type": "City",
+          "name": "Lathrup Village, Michigan"
+        },
+        {
+          "@type": "City",
+          "name": "Southfield, Michigan"
+        },
+        {
+          "@type": "City",
+          "name": "Clawson, Michigan"
+        },
+        {
+          "@type": "City",
+          "name": "Ferndale, Michigan"
+        },
+        {
+          "@type": "City",
+          "name": "Hazel Park, Michigan"
+        },
+        {
+          "@type": "City",
+          "name": "Oak Park, Michigan"
+        }
       ],
       "openingHoursSpecification": [
-        {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday"], "opens": "08:00", "closes": "17:00"},
-        {"@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "09:00", "closes": "15:00"}
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday"
+          ],
+          "opens": "08:00",
+          "closes": "17:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Friday",
+          "opens": "09:00",
+          "closes": "15:00"
+        }
       ],
       "medicalSpecialty": "Audiology",
       "availableService": [
-        {"@type": "MedicalProcedure", "name": "Diagnostic Hearing Evaluation", "url": "https://hinderliterhearing.com/services.html#hearing-tests"},
-        {"@type": "MedicalProcedure", "name": "Hearing Aid Fitting", "url": "https://hinderliterhearing.com/services.html#hearing-aids"},
-        {"@type": "MedicalProcedure", "name": "Hearing Aid Repair", "url": "https://hinderliterhearing.com/services.html#hearing-repair"},
-        {"@type": "MedicalProcedure", "name": "Tinnitus Evaluation and Treatment", "url": "https://hinderliterhearing.com/services.html#tinnitus"},
-        {"@type": "MedicalProcedure", "name": "Custom Hearing Protection", "url": "https://hinderliterhearing.com/services.html#hearing-protection"},
-        {"@type": "MedicalProcedure", "name": "Cochlear Implant Services", "url": "https://hinderliterhearing.com/services.html#cochlear-implants"},
-        {"@type": "MedicalProcedure", "name": "Cerumen (Ear Wax) Removal", "url": "https://hinderliterhearing.com/services.html#cerumen-removal"}
+        {
+          "@type": "MedicalProcedure",
+          "name": "Diagnostic Hearing Evaluation",
+          "url": "https://hinderliterhearing.com/services.html#hearing-tests"
+        },
+        {
+          "@type": "MedicalProcedure",
+          "name": "Hearing Aid Fitting",
+          "url": "https://hinderliterhearing.com/services.html#hearing-aids"
+        },
+        {
+          "@type": "MedicalProcedure",
+          "name": "Hearing Aid Repair",
+          "url": "https://hinderliterhearing.com/services.html#hearing-repair"
+        },
+        {
+          "@type": "MedicalProcedure",
+          "name": "Tinnitus Evaluation and Treatment",
+          "url": "https://hinderliterhearing.com/services.html#tinnitus"
+        },
+        {
+          "@type": "MedicalProcedure",
+          "name": "Custom Hearing Protection",
+          "url": "https://hinderliterhearing.com/services.html#hearing-protection"
+        },
+        {
+          "@type": "MedicalProcedure",
+          "name": "Cochlear Implant Services",
+          "url": "https://hinderliterhearing.com/services.html#cochlear-implants"
+        },
+        {
+          "@type": "MedicalProcedure",
+          "name": "Cerumen (Ear Wax) Removal",
+          "url": "https://hinderliterhearing.com/services.html#cerumen-removal"
+        }
       ],
       "aggregateRating": {
         "@type": "AggregateRating",
@@ -76,12 +175,7 @@
         "reviewCount": "401",
         "bestRating": "5",
         "worstRating": "1"
-      },
-      "sameAs": [
-        "https://www.google.com/maps/place/Hinderliter+Hearing+Services/@42.5449739,-83.2090905,17z",
-        "https://www.facebook.com/hinderliterhearing/",
-        "https://www.healthyhearing.com/hearing-aids/36180-hinderliter-hearing-services"
-      ]
+      }
     },
     {
       "@type": "Person",
@@ -95,16 +189,38 @@
       "description": "Dr. Kristin Hinderliter is a board-certified Doctor of Audiology and founder of Hinderliter Hearing Services in Birmingham, Michigan. Born with hearing loss herself, she has practiced audiology for over 18 years and serves patients throughout Oakland County and metro Detroit.",
       "image": "https://hinderliterhearing.com/assets/team-providers.jpg",
       "url": "https://hinderliterhearing.com/about.html",
-      "worksFor": {"@id": "https://hinderliterhearing.com/#business"},
-      "alumniOf": {"@type": "CollegeOrUniversity", "name": "Salus University"},
+      "worksFor": {
+        "@id": "https://hinderliterhearing.com/#business"
+      },
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "Salus University"
+      },
       "hasCredential": [
-        {"@type": "EducationalOccupationalCredential", "credentialCategory": "degree", "name": "Doctor of Audiology (Au.D.)"},
-        {"@type": "EducationalOccupationalCredential", "credentialCategory": "certification", "name": "Fellow, American Academy of Audiology (FAAA)"}
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "degree",
+          "name": "Doctor of Audiology (Au.D.)"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "certification",
+          "name": "Fellow, American Academy of Audiology (FAAA)"
+        }
       ],
       "memberOf": [
-        {"@type": "Organization", "name": "American Academy of Audiology"},
-        {"@type": "Organization", "name": "Academy of Doctors of Audiology"},
-        {"@type": "Organization", "name": "Michigan Academy of Audiology"}
+        {
+          "@type": "Organization",
+          "name": "American Academy of Audiology"
+        },
+        {
+          "@type": "Organization",
+          "name": "Academy of Doctors of Audiology"
+        },
+        {
+          "@type": "Organization",
+          "name": "Michigan Academy of Audiology"
+        }
       ],
       "knowsAbout": [
         "Audiology",
@@ -190,7 +306,9 @@
       "@id": "https://hinderliterhearing.com/#website",
       "url": "https://hinderliterhearing.com/",
       "name": "Hinderliter Hearing Services",
-      "publisher": {"@id": "https://hinderliterhearing.com/#business"},
+      "publisher": {
+        "@id": "https://hinderliterhearing.com/#business"
+      },
       "inLanguage": "en-US"
     }
   ]
