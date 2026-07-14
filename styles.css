@@ -1970,6 +1970,12 @@ noscript ~ * .fade-up {
   margin-bottom: var(--space-6);
 }
 
+/* === Info callouts (AEO safety modules) === */
+.info-callout{border:1px solid #d6d6d6;border-radius:10px;padding:18px 18px;margin:28px 0;background:#fafafa}
+.info-callout--urgent{border-color:#d9b2b2;background:#fff7f7}
+.info-callout h2{margin-top:0}
+.info-callout .small{font-size:var(--text-sm);opacity:.9}
+
 /* === Responsive Blog === */
 @media (max-width: 900px) {
   .article-grid {
