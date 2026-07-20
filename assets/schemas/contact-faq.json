@@ -1,0 +1,54 @@
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do you accept Medicare for hearing tests?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Medicare coverage can vary by plan and the type of appointment. If you call our office, we can help you understand what to expect before you come in."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you accept Blue Cross Blue Shield of Michigan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Coverage depends on your specific BCBS plan. Call our office and we will help you verify benefits and next steps."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you take CareCredit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We offer CareCredit as an option for qualified patients. Call us and we can walk you through what you need to apply and how it works for hearing care."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if I am not sure what my insurance covers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "That is common. Call our office with your insurance information and we can help you verify benefits and understand your options before your visit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you accept HSA or FSA payments?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Many patients use HSA or FSA funds for hearing-related care and devices. If you have questions, call us and we will help you plan the best way to pay."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer payment plans?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We can discuss available options based on your needs, including financing where appropriate. Call our office and we will help you choose a path that fits your situation."
+      }
+    }
+  ]
+}
