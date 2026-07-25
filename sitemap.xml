@@ -95,4 +95,10 @@
 <changefreq>monthly</changefreq>
 <priority>0.70</priority>
 </url>
-<url><loc>https://hinderliterhearing.com/hearing-test-near-me.html</loc><changefreq>monthly</changefreq><priority>0.70</priority></url></urlset>
+<url><loc>https://hinderliterhearing.com/hearing-test-near-me.html</loc><changefreq>monthly</changefreq><priority>0.70</priority></url>
+<url>
+<loc>https://hinderliterhearing.com/hearing-test-near-me-birmingham-mi.html</loc>
+<changefreq>weekly</changefreq>
+<priority>0.70</priority>
+</url>
+</urlset>
