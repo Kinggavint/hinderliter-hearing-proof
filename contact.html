@@ -258,14 +258,15 @@
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><polyline points="22,4 12,13 2,4"/></svg>
               Email
             </h3>
-            <a href="mailto:staff@hinderliterhearing.com" style="font-size:var(--text-base);font-weight:500;">staff@hinderliterhearing.com</a>
+            <a href="mailto:kristin@hinderliterhearing.com" style="font-size:var(--text-base);font-weight:500;">kristin@hinderliterhearing.com</a>
           </div>
         </div>
 
         <!-- Contact Form -->
         <div class="contact-form fade-up">
           <h2 class="contact-form__title">Send Us a Message</h2>
-          <form action="#" method="post" onsubmit="event.preventDefault();sendContactForm(this);">
+          <form id="contact-form" action="https://rlwfhxghcb.execute-api.us-east-2.amazonaws.com/contact" method="post" onsubmit="event.preventDefault();sendContactForm(this);">
+            <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-10000px;width:1px;height:1px;opacity:0;pointer-events:none;">
             <div class="form-row">
               <div class="form-group">
                 <label for="first-name">First Name *</label>
@@ -299,8 +300,8 @@
               </select>
             </div>
             <div class="form-group" style="display:flex;align-items:flex-start;gap:var(--space-2);">
-              <input type="checkbox" id="sms-consent" name="sms-consent" value="yes" aria-describedby="sms-consent-details">
-              <label for="sms-consent" id="sms-consent-details" style="font-size:var(--text-sm);line-height:1.6;cursor:pointer;">
+              <input type="checkbox" id="sms-consent" name="sms-consent" value="yes" aria-describedby="sms-consent-details" style="width:auto;flex:0 0 auto;margin-top:4px;">
+              <label for="sms-consent" id="sms-consent-details" style="font-size:var(--text-sm);line-height:1.6;cursor:pointer;flex:1 1 auto;display:block;">
                 I consent to receive SMS from Hinderliter Hearing. Reply STOP to opt-out. For assistance, reply HELP. Message and data rates may apply. Messaging frequency may vary.
               </label>
             </div>
@@ -322,28 +323,54 @@
           var lastName = form.querySelector('#last-name').value.trim();
           var email = form.querySelector('#email').value.trim();
           var phone = form.querySelector('#phone').value.trim();
-          var smsConsent = form.querySelector('#sms-consent').checked ? 'Yes' : 'No';
+          var smsConsent = form.querySelector('#sms-consent').checked;
           var message = form.querySelector('#message').value.trim();
+          var honeypot = form.querySelector('input[name="website"]').value;
 
-          var subject = 'Website Contact Form: ' + firstName + ' ' + lastName;
-          var bodyLines = [
-            'Name: ' + firstName + ' ' + lastName,
-            'Email: ' + email,
-            'Phone: ' + (phone || 'Not provided'),
-            'Reason for Visit: ' + (reasonLabel || 'Not provided'),
-            'SMS Consent: ' + smsConsent,
-            '',
-            'Message:',
-            message || '(no message entered)'
-          ];
-          var body = bodyLines.join('\n');
-          var mailtoLink = 'mailto:staff@hinderliterhearing.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-
-          window.location.href = mailtoLink;
-
+          var submitBtn = form.querySelector('button[type="submit"]');
           var note = form.querySelector('#contact-form-note');
-          note.textContent = 'Your email app should now open with this message pre-filled and addressed to our front desk \u2014 just hit send. If nothing opened, please email staff@hinderliterhearing.com or call/text us at (248) 430-4416 directly.';
-          note.style.color = 'var(--color-primary)';
+          submitBtn.disabled = true;
+          submitBtn.textContent = 'Sending...';
+          note.style.color = 'var(--color-text-muted)';
+          note.textContent = '';
+
+          var payload = {
+            client: 'hinderliter',
+            first_name: firstName,
+            last_name: lastName,
+            email: email,
+            phone: phone,
+            reason: reasonLabel,
+            sms_consent: smsConsent,
+            message: message,
+            website: honeypot
+          };
+
+          fetch(form.action, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+          })
+            .then(function (res) { return res.json().catch(function () { return { ok: res.ok }; }); })
+            .then(function (data) {
+              if (data && data.ok) {
+                form.reset();
+                submitBtn.textContent = 'Message Sent';
+                note.style.color = 'var(--color-success, #0a7d3b)';
+                note.textContent = 'Thanks \u2014 your message is on its way to our front desk. We\u2019ll follow up shortly. If you need immediate help, call or text (248) 430-4416.';
+              } else {
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Send Message';
+                note.style.color = 'var(--color-error, #b00020)';
+                note.textContent = 'Sorry \u2014 something went wrong sending your message. Please email kristin@hinderliterhearing.com or call/text (248) 430-4416 and we\u2019ll take care of you.';
+              }
+            })
+            .catch(function () {
+              submitBtn.disabled = false;
+              submitBtn.textContent = 'Send Message';
+              note.style.color = 'var(--color-error, #b00020)';
+              note.textContent = 'Sorry \u2014 we couldn\u2019t reach our mail service. Please email kristin@hinderliterhearing.com or call/text (248) 430-4416 and we\u2019ll take care of you.';
+            });
         }
       </script>
     </div>
