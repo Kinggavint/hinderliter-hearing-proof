@@ -265,7 +265,7 @@
         <!-- Contact Form -->
         <div class="contact-form fade-up">
           <h2 class="contact-form__title">Send Us a Message</h2>
-          <form action="#" method="post" onsubmit="event.preventDefault();alert('Thank you for your message! We will get back to you soon.');this.reset();">
+          <form action="#" method="post" onsubmit="event.preventDefault();sendContactForm(this);">
             <div class="form-row">
               <div class="form-group">
                 <label for="first-name">First Name *</label>
@@ -309,9 +309,43 @@
               <textarea id="message" name="message" rows="5" placeholder="Tell us how we can help you..."></textarea>
             </div>
             <button type="submit" class="btn btn--primary btn--large" style="width:100%;">Send Message</button>
+            <p id="contact-form-note" style="font-size:var(--text-sm);color:var(--color-text-muted);margin-top:var(--space-3);"></p>
           </form>
         </div>
       </div>
+
+      <script>
+        function sendContactForm(form) {
+          var reasonSelect = form.querySelector('#reason');
+          var reasonLabel = reasonSelect.options[reasonSelect.selectedIndex] ? reasonSelect.options[reasonSelect.selectedIndex].text : '';
+          var firstName = form.querySelector('#first-name').value.trim();
+          var lastName = form.querySelector('#last-name').value.trim();
+          var email = form.querySelector('#email').value.trim();
+          var phone = form.querySelector('#phone').value.trim();
+          var smsConsent = form.querySelector('#sms-consent').checked ? 'Yes' : 'No';
+          var message = form.querySelector('#message').value.trim();
+
+          var subject = 'Website Contact Form: ' + firstName + ' ' + lastName;
+          var bodyLines = [
+            'Name: ' + firstName + ' ' + lastName,
+            'Email: ' + email,
+            'Phone: ' + (phone || 'Not provided'),
+            'Reason for Visit: ' + (reasonLabel || 'Not provided'),
+            'SMS Consent: ' + smsConsent,
+            '',
+            'Message:',
+            message || '(no message entered)'
+          ];
+          var body = bodyLines.join('\n');
+          var mailtoLink = 'mailto:staff@hinderliterhearing.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+
+          window.location.href = mailtoLink;
+
+          var note = form.querySelector('#contact-form-note');
+          note.textContent = 'Your email app should now open with this message pre-filled and addressed to our front desk \u2014 just hit send. If nothing opened, please email staff@hinderliterhearing.com or call/text us at (248) 430-4416 directly.';
+          note.style.color = 'var(--color-primary)';
+        }
+      </script>
     </div>
   </section>
 
