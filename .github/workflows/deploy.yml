@@ -1,0 +1,146 @@
+# GitHub Actions: deploy origin/main to S3 + CloudFront invalidation
+#
+# Purpose: replace the previous pattern where a background cron agent ran
+# `aws s3 sync` from its own local working copy. That path caused a
+# 14-day site-revert incident (2026-08-13 -> 2026-08-27) when the local
+# copy diverged from origin/main and every deploy overwrote manual S3
+# fixes.
+#
+# This workflow deploys ONLY from what is on origin/main at the moment of
+# the push. There is no local working copy. If someone (agent or human)
+# wants live to change, they push to main. That is the only path.
+#
+# Trigger: push to main.
+# Manual re-run: workflow_dispatch (Actions tab -> "Run workflow").
+#
+# Required GitHub Actions secrets (create in repo Settings -> Secrets and
+# variables -> Actions):
+#   AWS_ACCESS_KEY_ID       - narrowly-scoped IAM user, see IAM_POLICY.md
+#   AWS_SECRET_ACCESS_KEY   - matching secret for that IAM user
+#
+# NOT reused: do NOT paste the shared Apex root/admin AWS keys here.
+# The IAM user for this workflow gets exactly two permissions:
+#   1. s3 write to s3://hinderliter-hearing-site
+#   2. cloudfront:CreateInvalidation on distribution E351Q8RD58U3KZ
+
+name: Deploy to S3 + CloudFront
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:  # allow manual re-run from the Actions tab
+
+concurrency:
+  # Never run two deploys at once. If a second push lands while one is
+  # running, cancel the older one so the newest content wins.
+  group: deploy-hinderliter-live
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+env:
+  AWS_REGION: us-east-2
+  S3_BUCKET: hinderliter-hearing-site
+  CLOUDFRONT_DISTRIBUTION_ID: E351Q8RD58U3KZ
+  LIVE_URL: https://hinderliterhearing.com
+
+jobs:
+  deploy:
+    name: Sync repo to S3 and invalidate CloudFront
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Check out origin/main
+        uses: actions/checkout@v4
+        with:
+          # Full checkout; we sync the whole tree.
+          fetch-depth: 1
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Show what will be deployed (dry run, first 40 lines)
+        run: |
+          echo "Deploying commit: ${{ github.sha }}"
+          echo "Commit message: ${{ github.event.head_commit.message }}"
+          echo ""
+          echo "=== Dry-run diff against live S3 (first 40 lines) ==="
+          aws s3 sync . "s3://${S3_BUCKET}/" \
+            --exclude ".git/*" \
+            --exclude ".github/*" \
+            --exclude "*.py" \
+            --exclude "*.json" \
+            --exclude "*.md" \
+            --exclude "*.sh" \
+            --dryrun | head -40
+
+      - name: Sync repo to S3
+        # NEVER --delete: the ~270 S3 redirect objects created by the
+        # 2026-07-16 soft-404 fix have no local counterpart. Deleting
+        # them would restore the soft-404 disaster.
+        #
+        # Excludes:
+        #   .git/*       repo metadata
+        #   .github/*    workflows and CI config
+        #   *.py *.json *.md *.sh   local tooling/docs, not site content
+        run: |
+          aws s3 sync . "s3://${S3_BUCKET}/" \
+            --exclude ".git/*" \
+            --exclude ".github/*" \
+            --exclude "*.py" \
+            --exclude "*.json" \
+            --exclude "*.md" \
+            --exclude "*.sh"
+
+      - name: Create CloudFront invalidation for /*
+        id: invalidate
+        run: |
+          INV_ID=$(aws cloudfront create-invalidation \
+            --distribution-id "${CLOUDFRONT_DISTRIBUTION_ID}" \
+            --paths "/*" \
+            --query 'Invalidation.Id' \
+            --output text)
+          echo "invalidation_id=${INV_ID}" >> "$GITHUB_OUTPUT"
+          echo "Invalidation started: ${INV_ID}"
+
+      - name: Wait for invalidation to complete
+        run: |
+          aws cloudfront wait invalidation-completed \
+            --distribution-id "${CLOUDFRONT_DISTRIBUTION_ID}" \
+            --id "${{ steps.invalidate.outputs.invalidation_id }}"
+          echo "Invalidation ${{ steps.invalidate.outputs.invalidation_id }} completed."
+
+      - name: Smoke test live homepage
+        run: |
+          echo "Fetching ${LIVE_URL}/ ..."
+          STATUS=$(curl -sSL -o /tmp/live.html -w '%{http_code}' -A 'GitHubActions-Deploy/1.0' "${LIVE_URL}/")
+          echo "HTTP status: ${STATUS}"
+          if [ "${STATUS}" != "200" ]; then
+            echo "Homepage did not return 200. Failing deploy."
+            head -40 /tmp/live.html || true
+            exit 1
+          fi
+          BYTES=$(wc -c < /tmp/live.html)
+          echo "Homepage bytes: ${BYTES}"
+          if [ "${BYTES}" -lt 500 ]; then
+            echo "Homepage suspiciously small. Failing deploy."
+            cat /tmp/live.html
+            exit 1
+          fi
+
+      - name: Summary
+        run: |
+          echo "### Hinderliter deploy complete" >> "$GITHUB_STEP_SUMMARY"
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          echo "- Commit: \`${{ github.sha }}\`" >> "$GITHUB_STEP_SUMMARY"
+          echo "- Message: ${{ github.event.head_commit.message }}" >> "$GITHUB_STEP_SUMMARY"
+          echo "- Bucket: \`s3://${S3_BUCKET}\`" >> "$GITHUB_STEP_SUMMARY"
+          echo "- CloudFront: \`${CLOUDFRONT_DISTRIBUTION_ID}\`" >> "$GITHUB_STEP_SUMMARY"
+          echo "- Invalidation: \`${{ steps.invalidate.outputs.invalidation_id }}\`" >> "$GITHUB_STEP_SUMMARY"
+          echo "- Live URL: ${LIVE_URL}" >> "$GITHUB_STEP_SUMMARY"
