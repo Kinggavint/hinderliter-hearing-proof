@@ -24,7 +24,7 @@
       },
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "751 Chestnut Street, Suite 203",
+        "streetAddress": "725 S Adams Rd",
         "addressLocality": "Birmingham",
         "addressRegion": "MI",
         "postalCode": "48009",
@@ -32,8 +32,8 @@
       },
       "geo": {
         "@type": "GeoCoordinates",
-        "latitude": 42.5449739,
-        "longitude": -83.2090905
+        "latitude": 42.5427878,
+        "longitude": -83.2049262
       },
       "hasMap": "https://www.google.com/maps/place/Hinderliter+Hearing+Services/@42.5449739,-83.2090905,17z/data=!3m1!4b1!4m6!3m5!1s0x8824c7aabd798c8b:0xdd4b378d737d2da5!8m2!3d42.5449739!4d-83.2090905!16s%2Fg%2F11g5_f07cm",
       "sameAs": [
@@ -248,7 +248,7 @@
           "name": "What is the best hearing aid clinic near Birmingham, MI?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Hinderliter Hearing Services at 751 Chestnut Street, Suite 203 in Birmingham, MI is a doctor-owned audiology clinic that fits hearing aids from every major manufacturer including Phonak, Oticon, Widex, Starkey, ReSound, and Signia. The practice has served Oakland County since 2003 and is staffed by three providers including Dr. Kristin Hinderliter."
+            "text": "Hinderliter Hearing Services at 725 S Adams Rd in Birmingham, MI is a doctor-owned audiology clinic that fits hearing aids from every major manufacturer including Phonak, Oticon, Widex, Starkey, ReSound, and Signia. The practice has served Oakland County since 2003 and is staffed by three providers including Dr. Kristin Hinderliter."
           }
         },
         {
