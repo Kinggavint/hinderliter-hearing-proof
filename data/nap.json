@@ -1,0 +1,11 @@
+{
+  "_comment": "Single source of truth for Hinderliter Hearing NAP. scripts/check_nap.py enforces it before every deploy. Phone confirmed by client (Rachel Lehman) by email 2026-07-17 and 2026-09-17. NEVER take a phone number from an email signature: (248) 430-8425 is Rachel's signature line, not the office number.",
+  "name": "Hinderliter Hearing Services",
+  "streetAddress": "725 S Adams Rd, Suite 240",
+  "addressLocality": "Birmingham",
+  "addressRegion": "MI",
+  "postalCode": "48009",
+  "phone_display": "(248) 430-4416",
+  "phone_e164": "+12484304416",
+  "banned_numbers": ["2484308425", "2486455421"]
+}
