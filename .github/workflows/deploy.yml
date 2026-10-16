@@ -58,6 +58,12 @@ jobs:
           # Full checkout; we sync the whole tree.
           fetch-depth: 1
 
+      - name: NAP guard (fail on wrong phone before deploy)
+        # Source of truth: data/nap.json. Blocks 430-8425 (an email
+        # signature line) and 645-5421, and any tel:/schema phone that is
+        # not (248) 430-4416.
+        run: python3 scripts/check_nap.py
+
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
@@ -78,6 +84,7 @@ jobs:
             --exclude "*.json" \
             --exclude "*.md" \
             --exclude "*.sh" \
+            --include "assets/schemas/homepage.json" \
             --dryrun | head -40
 
       - name: Sync repo to S3
@@ -89,6 +96,9 @@ jobs:
         #   .git/*       repo metadata
         #   .github/*    workflows and CI config
         #   *.py *.json *.md *.sh   local tooling/docs, not site content
+        # Re-include assets/schemas/homepage.json (live JSON-LD; it went stale
+        # because *.json was excluded). Later filters win. contact-faq.json is
+        # not referenced by any HTML/JS and is not live, so it stays excluded.
         run: |
           aws s3 sync . "s3://${S3_BUCKET}/" \
             --exclude ".git/*" \
@@ -96,7 +106,8 @@ jobs:
             --exclude "*.py" \
             --exclude "*.json" \
             --exclude "*.md" \
-            --exclude "*.sh"
+            --exclude "*.sh" \
+            --include "assets/schemas/homepage.json"
 
       - name: Create CloudFront invalidation for /*
         id: invalidate
