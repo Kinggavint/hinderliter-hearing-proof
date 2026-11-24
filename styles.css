@@ -73,11 +73,11 @@
   --space-24: 6rem;
   --space-32: 8rem;
 
-  /* Colors — Warm neutral + turquoise accent */
+  /* Colors — Warm neutral + dark cyan accent */
   --color-bg: #FAF9F6;
   --color-surface: #FFFFFF;
   --color-surface-warm: #F5F0EB;
-  --color-surface-teal: #E8F4F5;
+  --color-surface-teal: #E6F4F5;
   --color-divider: #E5E1DB;
   --color-border: #D4D0C8;
 
@@ -87,16 +87,16 @@
   --color-text-faint: #9B9B9B;
   --color-text-inverse: #FFFFFF;
 
-  /* Turquoise accent — from their logo */
-  --color-primary: #2AAFB5;
-  --color-primary-dark: #1D8A8F;
-  --color-primary-darker: #14686C;
-  --color-primary-light: #D5F0F1;
-  --color-primary-subtle: #EBF8F9;
+  /* Dark cyan accent — client request 2026-11-24 (#1C6B72) */
+  --color-primary: #1F767D;
+  --color-primary-dark: #1C6B72;
+  --color-primary-darker: #17585D;
+  --color-primary-light: #D5F0F2;
+  --color-primary-subtle: #E6F8FA;
 
   /* CTA colors */
-  --color-cta: #1D8A8F;
-  --color-cta-hover: #14686C;
+  --color-cta: #1C6B72;
+  --color-cta-hover: #17585D;
 
   /* Radius */
   --radius-sm: 0.375rem;
@@ -152,7 +152,7 @@ button { cursor: pointer; background: none; border: none; }
 ul, ol { list-style: none; }
 
 ::selection {
-  background: rgba(42, 175, 181, 0.2);
+  background: rgba(28, 107, 114, 0.2);
   color: var(--color-text);
 }
 
@@ -1459,7 +1459,7 @@ noscript ~ * .fade-up {
 
 .blog-search-input:focus {
   border-color: var(--color-primary);
-  box-shadow: 0 0 0 3px rgba(42, 175, 181, 0.15);
+  box-shadow: 0 0 0 3px rgba(28, 107, 114, 0.15);
 }
 
 .blog-search-input::placeholder {
@@ -1496,9 +1496,9 @@ noscript ~ * .fade-up {
 }
 
 .category-pill.active {
-  background: #2A9D8F;
+  background: #1C6B72;
   color: #fff;
-  border-color: #2A9D8F;
+  border-color: #1C6B72;
 }
 
 /* === Featured Articles Grid === */
@@ -1556,7 +1556,7 @@ noscript ~ * .fade-up {
 .featured-card__image-fallback {
   width: 100%;
   height: 220px;
-  background: linear-gradient(135deg, #2A9D8F 0%, #1D7A72 50%, #14686C 100%);
+  background: linear-gradient(135deg, #1C6B72 0%, #1A6269 50%, #17585D 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1668,7 +1668,7 @@ noscript ~ * .fade-up {
 .article-grid-card__image-fallback {
   width: 100%;
   height: 160px;
-  background: linear-gradient(135deg, #2A9D8F 0%, #1D7A72 60%, #14686C 100%);
+  background: linear-gradient(135deg, #1C6B72 0%, #1A6269 60%, #17585D 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1949,7 +1949,7 @@ noscript ~ * .fade-up {
 .article-cta {
   margin-top: var(--space-12);
   padding: var(--space-10) var(--space-8);
-  background: linear-gradient(135deg, #2A9D8F 0%, #1D7A72 100%);
+  background: linear-gradient(135deg, #1C6B72 0%, #1A6269 100%);
   border-radius: var(--radius-xl);
   text-align: center;
   color: #fff;
